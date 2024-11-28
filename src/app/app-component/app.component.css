@@ -1,0 +1,5 @@
+.content {
+    margin-top: 7rem; /* Adjust based on the height of the navbar */
+    padding-bottom: 3rem; /* Adjust based on the height of the footer */
+    flex-grow: 1; /* Allow content to take available space */
+}
