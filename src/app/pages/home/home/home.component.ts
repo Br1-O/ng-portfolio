@@ -6,6 +6,7 @@ import { EducationComponent } from '../sections/education/education.component';
 @Component({
   selector: 'app-home',
   imports: [AboutMeComponent, ProjectsComponent, EducationComponent],
+  standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
