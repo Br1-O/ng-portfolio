@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule} from '@angular/common';
+import { ProjectCardComponent } from '../../../../components/project-card/project-card.component';
 
 export interface Repository {
   name: string;
@@ -7,11 +8,12 @@ export interface Repository {
   homepage: string;
   description: string;
   img: string;
+  topics: string[];
 }
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule],
+  imports: [CommonModule, ProjectCardComponent],
   standalone: true,
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
@@ -34,6 +36,8 @@ export class ProjectsComponent implements OnInit {
 
   getOnlyPersonalProjects(data: Repository[]): void {
     let indexKeyWord = 0;
+
+    console.log(data);
     
     data.forEach((project) => {
   
@@ -50,6 +54,9 @@ export class ProjectsComponent implements OnInit {
 
         // Set proper description
         this.projects[this.projects.length - 1].description = project.description.substring(0, indexKeyWord);
+
+        // Set the labels for languages and technologies
+        this.projects[this.projects.length - 1].topics = project.topics;
       }
     });
 

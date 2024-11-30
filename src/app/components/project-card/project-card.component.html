@@ -1,0 +1,19 @@
+<div class="project bg-glass">
+    <a [href]="project.homepage || '#'" target="_blank" rel="noopener noreferrer">
+        <h3>{{ project.name }}</h3>
+    </a>
+    
+    <a [href]="project.html_url" target="_blank" rel="noopener noreferrer">
+        <img [src]="project.img" alt="project.name">
+    </a>
+    
+    <p>{{ project.description }}</p>
+    
+    <div *ngIf="project.topics && project.topics.length">
+        <ul id="container-topics">
+            <li *ngFor="let topic of project.topics">
+                <app-badge [text]="topic"></app-badge>
+            </li>
+        </ul>
+    </div>
+</div>

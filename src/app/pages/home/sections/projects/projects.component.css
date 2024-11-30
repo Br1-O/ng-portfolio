@@ -6,9 +6,3 @@
     width: 70%;
     margin: 0px auto;
 }
-
-#projects article img{
-
-    width: clamp(200px, 100%, 100%);
-    min-height: 15rem;
-}
