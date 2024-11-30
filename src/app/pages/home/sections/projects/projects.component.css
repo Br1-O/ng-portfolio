@@ -1,0 +1,14 @@
+#projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 16px; 
+    width: 70%;
+    margin: 0px auto;
+}
+
+#projects article img{
+
+    width: clamp(200px, 100%, 100%);
+    min-height: 15rem;
+}
