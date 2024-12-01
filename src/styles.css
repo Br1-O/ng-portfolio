@@ -68,7 +68,6 @@ input::placeholder{
   font-size: 1.25rem;
 }
 
-
 /* ■■■■­■■­■■­■■­■■ root variables  ■■■■­■■­■■­■■­■■ */
 
 :root{
@@ -828,7 +827,7 @@ input::placeholder{
 /* ■■■■­■■­■■­■■­■■ Scrollbar ■■■■­■■­■■­■■­■■ */
 
 ::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
+  width: 8px; /* Width of the scrollbar */
 }
 
 /* Track */
@@ -845,7 +844,7 @@ input::placeholder{
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(101, 101, 101);
+  background-color: var(--font-hover-color);
 }
 
 /* ■■■■­■■­■■­■■­■■ Loading Screen ■■■■­■■­■■­■■­■■ */
@@ -868,7 +867,7 @@ input::placeholder{
 
 .loading-logo{
   background-color: var(--main-bg-color);
-  background-image: url("../public/images/logo.png");
+  background-image: url("../public/images/logo-low.png");
   background-size: cover ;
   background-repeat: no-repeat;
   background-position: center;
@@ -885,6 +884,7 @@ input::placeholder{
 
   animation: spin 2s infinite ease;
 }
+
 /* ■■■■­■■­■■­■■­■■ Elements ■■■■­■■­■■­■■­■■ */
 
 body{

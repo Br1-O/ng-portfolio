@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BadgeComponent } from '../badge/badge.component';
 import { CommonModule } from '@angular/common';
 
@@ -10,6 +10,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.css'
 })
-export class ProjectCardComponent {
+export class ProjectCardComponent implements OnInit {
+  
   @Input() project: any;
+
+  ngOnInit(): void {
+  }
 }

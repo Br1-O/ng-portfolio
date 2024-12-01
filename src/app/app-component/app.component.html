@@ -1,8 +1,18 @@
-<app-navbar></app-navbar>
-
-<div class="content">
-    <router-outlet />
+<!-- loading animation -->
+<div *ngIf="isLoading" id="loading-overlay" class="loading-overlay">
+    <div class="loading-logo"></div>
 </div>
 
-<app-footer></app-footer>
+<!-- content -->
+<div *ngIf="!isLoading">
+    <app-navbar></app-navbar>
+
+    <div class="content">
+        <router-outlet />
+    </div>
+    
+    <app-footer></app-footer>
+</div>
+
+
 

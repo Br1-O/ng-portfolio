@@ -4,14 +4,21 @@
     </a>
     
     <div class="image-container">
-        <a [href]="project.html_url" target="_blank" rel="noopener noreferrer">
-            <img [src]="project.img" alt="project.name">
-        </a>
+        <img [src]="project.img" alt="project.name">
     </div>
     
     <p>{{ project.description }}</p>
     
-    <div *ngIf="project.topics && project.topics.length">
+    <div id="icons-container">
+        <a [href]="project.homepage || '#'" target="_blank" rel="noopener noreferrer">
+            <i class='bx bx-laptop' ></i>
+        </a>
+        <a [href]="project.html_url" target="_blank" rel="noopener noreferrer">
+            <i class='bx bxl-github'></i>           
+        </a>
+    </div>
+    
+    <div *ngIf="project.topics && project.topics.length" id="topics">
         <ul id="container-topics">
             <li *ngFor="let topic of project.topics">
                 <app-badge [text]="topic"></app-badge>
