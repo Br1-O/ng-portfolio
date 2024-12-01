@@ -11,5 +11,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './project-card.component.css'
 })
 export class ProjectCardComponent {
-    @Input() project: any
+  @Input() project: any;
 }

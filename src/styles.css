@@ -26,22 +26,46 @@ html {
 textarea {
   resize: none;
   border: none;
+  border-bottom: 1px solid var(--font-color);
   border-radius: 2px;
   padding: 0.25rem;
+  background-color: transparent;
 }
 
 textarea:focus{
   outline: none; 
+  border-bottom: 1px solid var(--font-hover-color);
+  
+  color: var(--font-hover-color);
+}
+
+textarea::placeholder{
+  color: var(--font-color);
+  font-size: 1.25rem;
+
+  text-align: start;
 }
 
 input{
   border: none;
+  border-bottom: 1px solid var(--font-color);
   border-radius: 2px;
   padding: 0.25rem;
+  background-color: transparent;
+
+  font-size: 1.25rem;
 }
 
 input:focus{
   outline: none; 
+  border-bottom: 1px solid var(--font-hover-color);
+
+  color: var(--font-hover-color);
+}
+
+input::placeholder{
+  color: var(--font-color);
+  font-size: 1.25rem;
 }
 
 
@@ -50,7 +74,7 @@ input:focus{
 :root{
   --main-color:#31cbd1 ;
   --secondary-color: #23b3e4;
-  --font-color: #286d8a;
+  --font-color: #256f8e;
   --font-hover-color: rgb(237, 236, 238);
   --border-color: #286d8a;
   --border-hover-color: rgb(237, 236, 238);
@@ -671,6 +695,75 @@ input:focus{
         transform: scaleX(1);
     }
 }
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-10deg); }
+  20% { transform: rotate(10deg); }
+  30% { transform: rotate(-8deg); }
+  40% { transform: rotate(8deg); }
+  50% { transform: rotate(-6deg); }
+  60% { transform: rotate(6deg); }
+  70% { transform: rotate(-4deg); }
+  80% { transform: rotate(4deg); }
+  90% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes shake-less {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-3deg); }
+  20% { transform: rotate(3deg); }
+  30% { transform: rotate(-2.5deg); }
+  40% { transform: rotate(2.5deg); }
+  50% { transform: rotate(-2deg); }
+  60% { transform: rotate(2deg); }
+  70% { transform: rotate(-1.5deg); }
+  80% { transform: rotate(1.5deg); }
+  90% { transform: rotate(-1deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes shake-lesser {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(-2deg); }
+  60% { transform: rotate(2deg); }
+  70% { transform: rotate(-1.5deg); }
+  80% { transform: rotate(1.5deg); }
+  90% { transform: rotate(-1deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes slide-background {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+@keyframes textColorTransition {
+  0% {
+    color: var(--font-color);
+  }
+  20% {
+    color: #7c7c7c; /* Intermediate color 1 */
+  }
+  40% {
+    color: #b0b0b0; /* Intermediate color 2 */
+  }
+  60% {
+    color: #d4d4d4; /* Intermediate color 3 */
+  }
+  80% {
+    color: var(--font-hover-color); /* Final color */
+  }
+  100% {
+    color: var(--font-hover-color);
+  }
+}
+
 
 /* ■■■■­■■­■■­■■­■■ custom classes ■■■■­■■­■■­■■­■■ */
 

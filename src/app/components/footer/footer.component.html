@@ -33,23 +33,22 @@
         <div>
             <div>
                 <label for="name"> Nombre completo </label>
-                <input type="text" name="name">
+                <input type="text" name="name" placeholder="Ingrese su nombre">
             </div>
 
             <div>
                 <label for="email"> Correo electronico </label>
-                <input type="text" name="email">
+                <input type="text" name="email" placeholder="Ingrese su email">
             </div>
         </div>
 
         <label for="subject"> Asunto </label>
-        <input type="text" name="subject">
+        <input type="text" name="subject" placeholder="Ingrese el motivo">
 
         <label for="message"> Consulta </label>
-        <textarea name="message">
-        </textarea>
+        <textarea name="message" placeholder="Ingrese su consulta" rows=3 cols=10></textarea>
 
-        <button type="submit"> Enviar Mensaje </button>
+        <app-button [text]="'Enviar Mensaje'"></app-button>
     </form>
 
 </footer>
