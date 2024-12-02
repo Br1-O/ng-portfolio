@@ -1,5 +1,14 @@
 <section id="projects">
-    <article *ngFor="let project of projects">
-        <app-project-card [project] = "project"></app-project-card>
-    </article>
+    
+    <h2 class="subtitle">
+        <i class='bx bx-folder' ></i>
+        <span>Mis proyectos </span>
+    </h2>
+
+    <div id="projects-container">
+        <article *ngFor="let project of projects">
+            <app-project-card [project] = "project"></app-project-card>
+        </article>
+    </div>
+
 </section>

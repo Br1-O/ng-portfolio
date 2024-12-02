@@ -1,5 +1,30 @@
 <section id="about-me">
-    <div>
-        <img src="images/profile-2.jpeg" alt="foto de perfil" class="profile-img">
+
+    <h2 class="subtitle">
+        <i class='bx bx-user' ></i>
+        <span>Sobre mí</span>
+    </h2>
+
+    <article>
+        <div id="personal-intro">
+            <p>
+                Soy un desarrollador fullstack apasionado por el diseño y la implementación de soluciones de software escalables y eficientes. 
+                Mi experiencia abarca lenguajes como <span>Java, C++, Python, JavaScript, PHP y SQL</span>, lo que me permite abordar proyectos desde múltiples perspectivas y entregar resultados de alta calidad.
+            </p>
+            <p>
+                Actualmente estoy cursando la <span>Tecnicatura en Análisis de Sistemas</span>, complementada con múltiples cursos especializados. Mi objetivo es certificar mis conocimientos, adquirir nuevas competencias y mantenerme siempre actualizado con las últimas tendencias tecnológicas.
+            </p>
+        </div>
+
+        <div id="image-container">
+            <img src="images/profile-2.jpeg" alt="foto de perfil" class="profile-img">
+        </div>
+    </article>
+
+    <div id="buttons-container">
+        <app-button [text]="'Ver curriculum'" [action]="downloadCV"></app-button>
+
+        <app-button [text]="'Ver linkedIn'" [action]="visitLinkedIn"></app-button>    
     </div>
+
 </section>

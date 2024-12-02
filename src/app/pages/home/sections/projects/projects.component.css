@@ -1,8 +1,23 @@
 #projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 90%;
+    
+    padding: 16px; 
+    margin: 0px auto;
+}
+
+@media (min-width: 768px){
+    #projects{
+        width: 70%;
+    }
+}
+
+#projects-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
-    padding: 16px; 
-    width: 70%;
-    margin: 0px auto;
 }

@@ -74,6 +74,7 @@ i{
 
 i:hover{
     color: var(--font-hover-color);
+    animation: RotateY 1s ease-in-out forwards;
 }
 
 #container-topics{
