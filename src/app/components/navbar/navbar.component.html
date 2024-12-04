@@ -1,16 +1,14 @@
 <header class="bg-glass" [class.scrolled]="isScrolled">
-    <a href="/home">
-        <img src="images/logo.png" alt="page logo" id="navbar-logo">
+    <a href="#">
+        <div id="logo-container">
+            <img src="images/logo.png" alt="page logo" id="navbar-logo">
+        </div>
+
     </a>
 
     <button id="menu-toggle" aria-label="Toggle menu" (click)="toggleMenu()">☰</button>
 
     <ul id="navbar-menu" [class.active]="isMenuActive">
-        <li class="nav-item">  
-            <a href="#about-me">
-                Sobre mí
-            </a>
-        </li>
         <li class="nav-item">  
             <a href="#projects">
                 Proyectos
@@ -19,6 +17,11 @@
         <li class="nav-item">  
             <a href="#education">
                 Educación
+            </a>
+        </li>
+        <li class="nav-item">  
+            <a href="#about-me">
+                Sobre mí
             </a>
         </li>
         <li class="nav-item">  

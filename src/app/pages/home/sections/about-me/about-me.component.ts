@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../../../../components/button/button.component';
+import { ButtonArrowComponent } from '../../../../components/button-arrow/button-arrow.component';
 
 @Component({
   selector: 'app-about-me',
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, ButtonArrowComponent],
   standalone: true,
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.css'

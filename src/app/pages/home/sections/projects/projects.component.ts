@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule} from '@angular/common';
 import { ProjectCardComponent } from '../../../../components/project-card/project-card.component';
+import { ButtonArrowComponent } from '../../../../components/button-arrow/button-arrow.component';
 
 export interface Repository {
   name: string;
@@ -13,7 +14,7 @@ export interface Repository {
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule, ProjectCardComponent],
+  imports: [CommonModule, ProjectCardComponent, ButtonArrowComponent],
   standalone: true,
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'

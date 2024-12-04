@@ -1,13 +1,14 @@
 #about-me{
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 1rem 2rem;
 
     width: 100%;
-    background-color: var(--secondary-color);
+    min-height: 80vh;
+    background: linear-gradient(135deg, #fffffff5, var(--main-color), #ffffff98);
     color: var(--font-color);
 
     margin: 0px auto;
@@ -22,6 +23,10 @@
 }
 
 @media (min-width: 768px){
+    #about-me{
+        padding: 7rem 1rem;
+    }
+    
     #about-me article{
         width: 70%;
     }
@@ -55,11 +60,11 @@
     padding: 1rem;
 }
 
-#personal-intro :first-child{
+#personal-intro :nth-child(even){
     transform: rotate(-5deg);
 }
 
-#personal-intro :nth-child(2){
+#personal-intro :nth-child(odd){
     transform: rotate(5deg);
 }
 

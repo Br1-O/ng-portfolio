@@ -1,0 +1,31 @@
+div{
+    padding: 1rem;
+    border: 1px solid var(--font-hover-color);
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    justify-self: center;
+    align-self: center;
+    z-index: 10; 
+}
+
+
+div:hover{
+    filter: brightness(1.25);
+    animation: TranslateY 1s ease-in;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+i{
+    font-size: 3.5rem;
+    transform: scaleX(0.75); 
+    color: var(--font-hover-color);
+    vertical-align: middle;
+}

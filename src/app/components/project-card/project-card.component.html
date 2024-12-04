@@ -1,10 +1,12 @@
-<div class="project bg-glass">
+<div class="project bg-glass codepen-button">
     <a [href]="project.homepage || '#'" target="_blank" rel="noopener noreferrer">
         <h3>{{ project.name }}</h3>
     </a>
     
     <div class="image-container">
-        <img [src]="project.img" alt="project.name">
+        <a [href]="project.homepage || '#'" target="_blank" rel="noopener noreferrer">
+            <img [src]="project.img" alt="project.name">
+        </a>
     </div>
     
     <p>{{ project.description }}</p>

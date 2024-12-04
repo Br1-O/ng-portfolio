@@ -5,13 +5,15 @@
     align-items: center;
 
     width: 90%;
+    min-height: 80vh;
     
-    padding: 16px; 
+    padding: 1rem;
     margin: 0px auto;
 }
 
 @media (min-width: 768px){
     #projects{
+        padding: 7rem 1rem; 
         width: 70%;
     }
 }

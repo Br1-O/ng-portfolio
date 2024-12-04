@@ -7,6 +7,11 @@
     cursor: pointer;
     overflow: hidden;
     z-index: 1;
+    
+    /* glass like effect */
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .animated-button span{
