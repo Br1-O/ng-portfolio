@@ -41,11 +41,8 @@ export class ContactFormComponent {
         {
           next: (response: any) => 
           {
-            console.log('Form submitted successfully:', response);
-            alert('Funciona, prro!');
-          },
-          error: (err: Error) => {
-            console.log(err);
+            alert('¡Formulario enviado correctamente!');
+            this.form.reset();
           }
         }
       );
