@@ -17,6 +17,10 @@
     border-radius: 30% 0;
 }
 
+#about-me.visible{
+    animation: scrollRevealOpacity 1.5s ease;
+}
+
 #about-me article{
     display: flex;
     flex-direction: row;

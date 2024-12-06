@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonArrowComponent } from '../../../../components/button-arrow/button-arrow.component';
 import { EducationCardComponent } from '../../../../components/education-card/education-card.component';
@@ -14,6 +14,19 @@ import { Education } from '../../../../interfaces/education.interface';
 })
 export class EducationComponent implements OnInit{
 
+  //animation
+  isVisible = false;
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    const element = document.querySelector('#education');
+    if (element) {
+      const rect = element.getBoundingClientRect();
+      const topInView = rect.top >= 0 && rect.top <= window.innerHeight;
+      this.isVisible = topInView;
+    }
+  }
+
+  //injects
   educations: Education[] = [];
 
   educationService: EducationService;
@@ -22,6 +35,7 @@ export class EducationComponent implements OnInit{
     this.educationService = educationService;
   }
 
+  //on init
   ngOnInit(): void {
     // Fetch education data
     this.educationService.getEducation().subscribe(

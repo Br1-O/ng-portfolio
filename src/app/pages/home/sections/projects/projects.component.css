@@ -18,6 +18,10 @@
     overflow: hidden;
 }
 
+#projects.visible{
+    animation: scrollRevealOpacity 1.5s ease;
+}
+
 #projects #projects-wrapper{
     display: flex;
     flex-direction: column;

@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { CommonModule} from '@angular/common';
 import { ProjectCardComponent } from '../../../../components/project-card/project-card.component';
 import { ButtonArrowComponent } from '../../../../components/button-arrow/button-arrow.component';
@@ -13,7 +13,20 @@ import { Repository } from '../../../../interfaces/repository.interface';
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent implements OnInit {
+
+  //animation
+  isVisible = false;
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    const element = document.querySelector('#projects');
+    if (element) {
+      const rect = element.getBoundingClientRect();
+      const topInView = rect.top >= 0 && rect.top <= window.innerHeight;
+      this.isVisible = topInView;
+    }
+  }
   
+  //injects
   user:string = "Br1-O";
   projects: Repository[] = [];
 
@@ -23,6 +36,7 @@ export class ProjectsComponent implements OnInit {
     this.projectsService = projectsService;
   }
 
+  //on init
   ngOnInit(): void {
 
     //add private projects cards

@@ -19,6 +19,10 @@
   overflow: hidden;
 }
 
+#education.visible{
+  animation: scrollRevealOpacity 1.5s ease;
+}
+
 #education-wrapper{
   display: flex;
   flex-direction: column;
@@ -38,7 +42,6 @@ app-education-card{
   flex-direction: column;
   width: 100%;
 }
-
 
 @media (min-width: 768px){
   #education{
