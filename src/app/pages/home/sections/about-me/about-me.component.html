@@ -6,22 +6,37 @@
     </h2>
 
     <article>
-        <div id="personal-intro">
-            <p class="bg-glass-dark">
+        <div class="personal-intro">
+            <p>
                 Soy un desarrollador fullstack apasionado por el diseño y la implementación de soluciones de software escalables y eficientes. 
                 Mi experiencia abarca lenguajes como <span>Java, C++, Python, JavaScript, PHP y SQL</span>, lo que me permite abordar proyectos desde múltiples perspectivas y entregar resultados de alta calidad.
             </p>
-            <p class="bg-glass-dark">
+            <p>
                 Actualmente estoy cursando la <span>Tecnicatura en Análisis de Sistemas</span>, complementada con múltiples cursos especializados. Mi objetivo es certificar mis conocimientos, adquirir nuevas competencias y mantenerme siempre actualizado con las últimas tendencias tecnológicas.
             </p>
         </div>
 
-        <div id="image-container" class="bg-glass-dark">
+        <div class="image-container">
             <img src="images/profile-2.jpeg" alt="foto de perfil" class="profile-img">
         </div>
     </article>
 
-    <app-currvitae-btns></app-currvitae-btns>
+    <article>
+        <div class="image-container bg-glass-dark">
+            <img src="images/pawn.avif" alt="foto de perfil" class="profile-img">
+        </div>
+
+        <div class="personal-intro interests">
+            <p class="bg-glass-dark">
+                Entre mis aficiones se encuentran los juegos de mesa que involucran la lógica, estrategia y administración de recursos,
+                destacandose entre ellos el <span> ajedrez</span> y juegos de mesa modernos del tipo europeo.
+            </p>
+            <p class="bg-glass-dark">
+                Disfruto de aprender cosas nuevas, entre ellas nuevos <span> idiomas</span>, 
+                ya que estos me permiten ver peliculas y series sin sufrir de la perdida de significado que se produce en las traducciones.
+            </p>
+        </div>
+    </article>
 
     <app-button-arrow [section]="'#contact'" [sectionName]="'Contacto'"></app-button-arrow>
 

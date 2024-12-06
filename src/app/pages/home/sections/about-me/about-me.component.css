@@ -4,10 +4,10 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
 
     width: 100%;
-    min-height: 80vh;
+    min-height: 100vh;
 
     margin: 0px auto;
 
@@ -28,7 +28,8 @@
 
 @media (min-width: 768px){
     #about-me{
-        padding: 7rem 1rem;
+        padding: 1rem;
+        padding-top: 7rem;
         width: 90%;
     }
 
@@ -42,7 +43,7 @@
     }
 }
 
-#personal-intro{
+.personal-intro{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,7 +57,7 @@
 }
 
 @media (min-width: 768px){
-    #personal-intro{
+    .personal-intro{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -65,7 +66,7 @@
     }
 }
 
-#personal-intro p{
+.personal-intro p{
     border: 1px solid var(--font-hover-color);
     border-radius: 10px;
     padding: 1rem;
@@ -75,24 +76,41 @@
     color: var(--font-color);
 }
 
-#personal-intro :nth-child(even){
+
+.personal-intro :nth-child(even){
     transform: rotate(-5deg);
 }
 
-#personal-intro :nth-child(odd){
+.personal-intro :nth-child(odd){
     transform: rotate(5deg);
 }
 
-#personal-intro p span{
+.personal-intro p span{
     font-weight: 700;
 }
 
-#image-container{
+.image-container{
     border: 1px solid var(--font-hover-color);
     border-radius: 10px;
     padding: 0.5rem;
 
+    background: linear-gradient(135deg, #fffffff5, var(--secondary-color), #ffffff98);
+
     transform: rotate(5deg);
+}
+
+.interests :nth-child(even){
+    transform: rotate(5deg);
+    color: var(--font-hover-color);
+}
+
+.interests :nth-child(odd){
+    transform: rotate(-5deg);
+    color: var(--font-hover-color);
+}
+
+.image-container:nth-of-type(1){
+    transform: rotate(-5deg);
 }
 
 .profile-img{
