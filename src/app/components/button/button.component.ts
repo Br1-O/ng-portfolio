@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-button',
@@ -10,12 +11,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ButtonComponent {
   @Input() text: string = "";
   @Input() action: () => void = () => {}; // Function to execute
-  @Output() clicked = new EventEmitter<void>(); // Optional output event
+  @Output() clicked = new EventEmitter<void>();
+  @Input() form: FormGroup = new FormGroup({});
+
 
   onClick() {
-    if (this.action) {
-      this.action(); // Call the passed function
+    if (this.action && this.form.valid) {
+      this.action();
+      this.clicked.emit();
     }
-    this.clicked.emit(); // Emit event for the parent component
   }
 }

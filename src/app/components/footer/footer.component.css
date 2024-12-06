@@ -46,34 +46,6 @@ i:hover{
     animation: RotateY 1s ease-in-out forwards;
 }
 
-#footer-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    margin: 0px auto;
-    width: 50%;
-}
-
-#footer-form div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    width: 100%;
-}
-
-#footer-form div div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    width: 100%;
-}
-
 @media (min-width: 768px){
     footer{
         display: flex;
@@ -92,35 +64,7 @@ i:hover{
         justify-content: center;
         align-items: center;
     }
-
     #footer-form{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        gap: 0.5rem;
-        margin: 0px auto;
         width: 50%;
-    }
-
-    #footer-form div{
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        align-items: center;
-        gap: 1rem;
-        width: 70%;
-    }
-
-    #footer-form input{
-        width: 70%;
-    }
-
-    #footer-form textarea{
-        width: 70%;
-    }
-
-    #footer-form div div input{
-        width: 100%;
     }
 }

@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from '../button/button.component';
+import { ContactFormComponent } from '../contact-form/contact-form.component';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [ButtonComponent],
+  imports: [ContactFormComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
 }

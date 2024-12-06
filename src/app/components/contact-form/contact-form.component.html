@@ -1,0 +1,62 @@
+<form
+  [formGroup]="form"
+  (ngSubmit)="send()"
+  id="contact-form"
+  action="https://formspree.io/f/xrbgjera"
+>
+  <div>
+    <div>
+      <label for="name">Nombre completo</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Ingrese su nombre"
+        formControlName="name"
+      />
+      <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+        <small *ngIf="form.get('name')?.errors?.['required']">El nombre es obligatorio.</small>
+        <small *ngIf="form.get('name')?.errors?.['minlength']">Debe tener al menos 3 caracteres.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="email">Correo electrónico</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Ingrese su email"
+        formControlName="email"
+      />
+      <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+        <small *ngIf="form.get('email')?.errors?.['required']">El correo es obligatorio.</small>
+        <small *ngIf="form.get('email')?.errors?.['email']">El correo no es válido.</small>
+      </div>
+    </div>
+  </div>
+
+  <label for="subject">Asunto</label>
+  <input
+    type="text"
+    id="subject"
+    placeholder="Ingrese el motivo"
+    formControlName="subject"
+  />
+  <div *ngIf="form.get('subject')?.invalid && form.get('subject')?.touched">
+    <small *ngIf="form.get('subject')?.errors?.['required']">El asunto es obligatorio.</small>
+    <small *ngIf="form.get('subject')?.errors?.['minlength']">Debe tener al menos 3 caracteres.</small>
+  </div>
+
+  <label for="message">Consulta</label>
+  <textarea
+    id="message"
+    placeholder="Ingrese su consulta"
+    rows="3"
+    formControlName="message"
+  ></textarea>
+  <div *ngIf="form.get('message')?.invalid && form.get('message')?.touched">
+    <small *ngIf="form.get('message')?.errors?.['required']">La consulta es obligatoria.</small>
+    <small *ngIf="form.get('message')?.errors?.['minlength']">Debe tener al menos 10 caracteres.</small>
+  </div>
+
+  <app-button [text]="'Enviar Mensaje'" [action]="send" [form]="form"></app-button>
+</form>

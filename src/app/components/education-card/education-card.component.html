@@ -1,5 +1,10 @@
 <div  id="education-container">
-    <div class="info-container header">
+        
+    <div class="line">
+        <div class="dot"></div>
+    </div>
+
+    <div class="header bg-glass-dark">
         <div>
             <h3 *ngIf="education.name">
                 {{education.name}}
@@ -12,12 +17,8 @@
             </h5>
         </div>
     </div>
-    
-    <div class="line">
-        <div class="dot"></div>
-    </div>
-    
-    <div class="info-container content">
+
+    <div class="content bg-glass-dark">
         <p *ngIf="education.subjects">
             {{education.description}}
         </p>

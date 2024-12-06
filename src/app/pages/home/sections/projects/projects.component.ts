@@ -1,17 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { CommonModule} from '@angular/common';
 import { ProjectCardComponent } from '../../../../components/project-card/project-card.component';
 import { ButtonArrowComponent } from '../../../../components/button-arrow/button-arrow.component';
 import { ProjectsService } from '../../../../services/projects/projects.service';
-
-export interface Repository {
-  name: string;
-  html_url: string | null;
-  homepage: string | null;
-  description: string;
-  img: string | null;
-  topics: string[];
-}
+import { Repository } from '../../../../interfaces/repository.interface';
 
 @Component({
   selector: 'app-projects',
@@ -25,7 +17,11 @@ export class ProjectsComponent implements OnInit {
   user:string = "Br1-O";
   projects: Repository[] = [];
 
-  constructor(private projectsService: ProjectsService) {}
+  projectsService: ProjectsService;
+
+  constructor(@Inject(ProjectsService) projectsService: ProjectsService) {
+    this.projectsService = projectsService;
+  }
 
   ngOnInit(): void {
 
@@ -43,9 +39,17 @@ export class ProjectsComponent implements OnInit {
     this.projects.push(privateProject);
 
     //fetch public repositories
-      this.projectsService.getProjects(this.user).subscribe((data) => {
-        this.getOnlyPersonalProjects(data);
-      });
+    this.projectsService.getProjects(this.user).subscribe(
+      {
+        next: (projects: Repository[]) => 
+        {
+          this.getOnlyPersonalProjects(projects);
+        },
+        error: (err: Error) => {
+          console.log(err);
+        }
+      }
+    );
   }
 
   //filter to only show personal projects
