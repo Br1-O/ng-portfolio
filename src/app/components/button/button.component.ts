@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { FormPostService } from '../../services/form/form-post.service';
 
 @Component({
   selector: 'app-button',
@@ -13,7 +14,12 @@ export class ButtonComponent {
   @Input() action: () => void = () => {}; // Function to execute
   @Output() clicked = new EventEmitter<void>();
   @Input() form: FormGroup = new FormGroup({});
+  
+  formPostService: FormPostService;
 
+  constructor(formPostService: FormPostService) {
+    this.formPostService = formPostService;
+  }
 
   onClick() {
     if (this.action && this.form.valid) {

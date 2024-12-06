@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../button/button.component';
 import { Message } from '../../interfaces/message.interface';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormPostService } from '../../services/form/form-post.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -13,21 +14,42 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 })
 export class ContactFormComponent {
 
+  postUrl="https://formspree.io/f/xrbgjera"
+
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  formPostService: FormPostService;
+
+  constructor(private fb: FormBuilder, @Inject(FormPostService) formPostService: FormPostService) {
     this.form = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       subject: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required, Validators.minLength(10)]],
     });
+
+    this.formPostService = formPostService;
   }
 
   send() {
     if (this.form.valid) {
+      //get data from form
       const formData: Message = this.form.getRawValue();
-      console.log('Form submitted successfully:', formData);
+
+      //post request to endpoint
+      this.formPostService.postRequest(this.postUrl, formData).subscribe(
+        {
+          next: (response: any) => 
+          {
+            console.log('Form submitted successfully:', response);
+            alert('Funciona, prro!');
+          },
+          error: (err: Error) => {
+            console.log(err);
+          }
+        }
+      );
+
     } else {
       // Mark all fields to show validation messages
       this.form.markAllAsTouched(); 
