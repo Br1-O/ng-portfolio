@@ -1,14 +1,16 @@
-<section id="projects">
-    
-    <h2 class="subtitle">
-        <i class='bx bx-folder' ></i>
-        <span>Mis proyectos </span>
-    </h2>
+<section id="projects" class="bg-glass">
 
-    <div id="projects-container">
-        <article *ngFor="let project of projects">
-            <app-project-card [project] = "project"></app-project-card>
-        </article>
+    <div id="projects-wrapper">
+        <h2 class="subtitle">
+            <i class='bx bx-folder' ></i>
+            <span>Mis proyectos </span>
+        </h2>
+    
+        <div id="projects-container">
+            <article *ngFor="let project of projects">
+                <app-project-card [project] = "project"></app-project-card>
+            </article>
+        </div>
     </div>
 
     <app-button-arrow [section]="'#education'" [sectionName]="'Educación'"></app-button-arrow>

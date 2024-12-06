@@ -1,4 +1,4 @@
 .content {
-    margin-top: 7rem; /* Adjust based on the height of the navbar */
-    flex-grow: 1; /* Allow content to take available space */
+    margin-top: 7rem; /* height of the navbar */
+    flex-grow: 1;
 }

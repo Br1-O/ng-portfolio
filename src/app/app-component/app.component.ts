@@ -3,11 +3,15 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { EducationService } from '../services/education/education.service';
+import { ProjectsService } from '../services/projects/projects.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, NavbarComponent, FooterComponent],
+  imports: [RouterOutlet, CommonModule, NavbarComponent, FooterComponent, HttpClientModule],
+  providers: [EducationService, ProjectsService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

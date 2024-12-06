@@ -19,14 +19,31 @@ table { border-collapse: collapse; border-spacing: 0;}
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--secondary-color);
+
   font-size: 62.5%;
 }
 
 body{
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #fffffff5, var(--main-color), #ffffff98);
+  background-image: url("/images/bg-1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/*overlay to ease bg brightness*/
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
 }
 
 /* ■■■■­■■­■■­■■­■■ root variables  ■■■■­■■­■■­■■­■■ */
@@ -646,6 +663,61 @@ body{
     96% { transform: scale(0.96); }
     98% { transform: scale(0.98); }
     100% { transform: scale(1); }
+}
+
+/* Gradual zoom-in with smooth rotation from 320deg to 0deg */
+@keyframes zoomInWithSpin {
+    0% { transform: scale(0) rotate(320deg); }
+    2% { transform: scale(0.02) rotate(310deg); }
+    4% { transform: scale(0.04) rotate(300deg); }
+    6% { transform: scale(0.06) rotate(290deg); }
+    8% { transform: scale(0.08) rotate(280deg); }
+    10% { transform: scale(0.1) rotate(270deg); }
+    12% { transform: scale(0.12) rotate(260deg); }
+    14% { transform: scale(0.14) rotate(250deg); }
+    16% { transform: scale(0.16) rotate(240deg); }
+    18% { transform: scale(0.18) rotate(230deg); }
+    20% { transform: scale(0.2) rotate(220deg); }
+    22% { transform: scale(0.22) rotate(210deg); }
+    24% { transform: scale(0.24) rotate(200deg); }
+    26% { transform: scale(0.26) rotate(190deg); }
+    28% { transform: scale(0.28) rotate(180deg); }
+    30% { transform: scale(0.3) rotate(170deg); }
+    32% { transform: scale(0.32) rotate(160deg); }
+    34% { transform: scale(0.34) rotate(150deg); }
+    36% { transform: scale(0.36) rotate(140deg); }
+    38% { transform: scale(0.38) rotate(130deg); }
+    40% { transform: scale(0.4) rotate(120deg); }
+    42% { transform: scale(0.42) rotate(110deg); }
+    44% { transform: scale(0.44) rotate(100deg); }
+    46% { transform: scale(0.46) rotate(90deg); }
+    48% { transform: scale(0.48) rotate(80deg); }
+    50% { transform: scale(0.5) rotate(70deg); }
+    52% { transform: scale(0.52) rotate(60deg); }
+    54% { transform: scale(0.54) rotate(50deg); }
+    56% { transform: scale(0.56) rotate(40deg); }
+    58% { transform: scale(0.58) rotate(30deg); }
+    60% { transform: scale(0.6) rotate(20deg); }
+    62% { transform: scale(0.62) rotate(10deg); }
+    64% { transform: scale(0.64) rotate(5deg); }
+    66% { transform: scale(0.66) rotate(2deg); }
+    68% { transform: scale(0.68) rotate(1deg); }
+    70% { transform: scale(0.7) rotate(0deg); }  /* Gradually approaches 0deg */
+    72% { transform: scale(0.72) rotate(0deg); }
+    74% { transform: scale(0.74) rotate(0deg); }
+    76% { transform: scale(0.76) rotate(0deg); }
+    78% { transform: scale(0.78) rotate(0deg); }
+    80% { transform: scale(0.8) rotate(0deg); }
+    82% { transform: scale(0.82) rotate(0deg); }
+    84% { transform: scale(0.84) rotate(0deg); }
+    86% { transform: scale(0.86) rotate(0deg); }
+    88% { transform: scale(0.88) rotate(0deg); }
+    90% { transform: scale(0.9) rotate(0deg); }
+    92% { transform: scale(0.92) rotate(0deg); }
+    94% { transform: scale(0.94) rotate(0deg); }
+    96% { transform: scale(0.96) rotate(0deg); }
+    98% { transform: scale(0.98) rotate(0deg); }
+    100% { transform: scale(1) rotate(0deg); }  /* Final position at 0deg */
 }
 
 /* flip element to the right */
@@ -2015,6 +2087,69 @@ body{
   -webkit-backdrop-filter: blur(5px);
 }
 
+.bg-glass-dark{
+    /* glass like effect */
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.bg-glass-light{
+    /* glass like effect */
+    background: rgba(255, 255, 255, 0.38);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.bg-glass-cuadric {
+    /* Glass-like effect */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+  
+    /* To emphasize cracks */
+    border: none;
+    box-shadow: none;
+}
+  
+.bg-glass-cuadric::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    /* Cracked glass pattern */
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 2px,
+        transparent 3px,
+        transparent 8px
+        ),
+        repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 2px,
+        transparent 3px,
+        transparent 8px
+        );
+    opacity: 0.4; /* Adjust for subtlety */
+    mix-blend-mode: overlay;
+}
+
+.bg-glass-shattered {
+    background: url('../public/images/glass-broken.png') no-repeat center/cover;
+    background-position: top;
+    mix-blend-mode:lighten;
+    height: 100%;
+    width: 100%;
+}
+
 /* chess board like effect */
 .bg-chess {
   width: 100%;
@@ -2175,7 +2310,7 @@ input::placeholder{
 }
 
 .subtitle{
-  color: var(--font-color);
+  color: var(--font-hover-color);
   font-size: 2.5rem;
   margin-top: 0.5rem;
   margin-bottom: 2.75rem;
@@ -2191,8 +2326,9 @@ input::placeholder{
   vertical-align: middle;
 }
 
-section{
+section, footer{
   position: relative;
+  z-index: 2;
 }
 
 .btn-arrow-container{

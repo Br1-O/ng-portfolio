@@ -1,0 +1,29 @@
+<div  id="education-container">
+    <div class="info-container header">
+        <div>
+            <h3 *ngIf="education.name">
+                {{education.name}}
+            </h3>
+            <h4 *ngIf="education.place">
+                {{education.place}}
+            </h4>
+            <h5 *ngIf="education.date">
+                {{education.date}}
+            </h5>
+        </div>
+    </div>
+    
+    <div class="line">
+        <div class="dot"></div>
+    </div>
+    
+    <div class="info-container content">
+        <p *ngIf="education.subjects">
+            {{education.description}}
+        </p>
+        <p *ngIf="education.subjects">
+            Habilidades: {{(education.subjects)}}
+        </p>
+    </div>
+    
+</div>

@@ -4,14 +4,17 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 2rem;
+    padding: 2rem 3rem;
 
     width: 100%;
     min-height: 80vh;
-    background: linear-gradient(135deg, #fffffff5, var(--main-color), #ffffff98);
-    color: var(--font-color);
 
     margin: 0px auto;
+
+    border: 0.5px solid var(--font-hover-color);
+    border-top: 2px solid var(--font-hover-color);
+    border-bottom: 2px solid var(--font-hover-color);
+    border-radius: 30% 0;
 }
 
 #about-me article{
@@ -25,11 +28,9 @@
 @media (min-width: 768px){
     #about-me{
         padding: 7rem 1rem;
+        width: 90%;
     }
-    
-    #about-me article{
-        width: 70%;
-    }
+
 }
 
 #personal-intro{
@@ -58,6 +59,9 @@
     border: 1px solid var(--font-hover-color);
     border-radius: 10px;
     padding: 1rem;
+
+    background: linear-gradient(135deg, #fffffff5, var(--secondary-color), #ffffff98);
+    color: var(--font-color);
 }
 
 #personal-intro :nth-child(even){

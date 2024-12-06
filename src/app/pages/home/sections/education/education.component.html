@@ -1,25 +1,14 @@
-<section id="education">
-    <h2 class="subtitle">
-        <i class='bx bx-book-alt' ></i>
-        <span>Educación </span>
-    </h2>
-
-    <div id="education-container">
-
-        <div class="info-container">
-            
+<section id="education" class="bg-glass" >
+    
+    <div id="education-wrapper">
+        <h2 class="subtitle">
+            <i class='bx bx-book-alt' ></i>
+            <span>Educación </span>
+        </h2>
+    
+        <div *ngIf="educations.length > 0">
+            <app-education-card [education] = "education" *ngFor="let education of educations"></app-education-card>
         </div>
-
-        <div class="line">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-        
-        <div class="info-container">
-            
-        </div>
-        
     </div>
 
     <app-button-arrow [section]="'#about-me'" [sectionName]="'Sobre mí'"></app-button-arrow>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule} from '@angular/common';
 import { ProjectCardComponent } from '../../../../components/project-card/project-card.component';
 import { ButtonArrowComponent } from '../../../../components/button-arrow/button-arrow.component';
+import { ProjectsService } from '../../../../services/projects/projects.service';
 
 export interface Repository {
   name: string;
@@ -24,10 +25,11 @@ export class ProjectsComponent implements OnInit {
   user:string = "Br1-O";
   projects: Repository[] = [];
 
+  constructor(private projectsService: ProjectsService) {}
+
   ngOnInit(): void {
 
     //add private projects cards
-
     let privateProject: Repository = 
     {
       name: "NextFlix",
@@ -41,14 +43,9 @@ export class ProjectsComponent implements OnInit {
     this.projects.push(privateProject);
 
     //fetch public repositories
-    fetch(`https://api.github.com/users/${this.user}/repos?per_page=100&page=1`)    
-    .then(response => response.json())
-    .then(data => 
-      {
+      this.projectsService.getProjects(this.user).subscribe((data) => {
         this.getOnlyPersonalProjects(data);
-      }
-    )
-    .catch(error => console.error('Error:', error));
+      });
   }
 
   //filter to only show personal projects

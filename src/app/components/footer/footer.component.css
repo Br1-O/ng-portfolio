@@ -1,5 +1,4 @@
 footer{
-    background-color: var(--secondary-color);
     width: 100%;
     min-height: 15rem;
 
@@ -9,6 +8,8 @@ footer{
     align-items: center;
     gap: 1rem;
     padding: 1.5rem;
+
+    border-top: 1px solid var(--font-hover-color);
 }
 
 #footer-contact{

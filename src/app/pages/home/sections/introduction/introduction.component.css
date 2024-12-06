@@ -1,9 +1,4 @@
 #intro {
-    background-image: url("/images/bg-1.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     width: 100%;
     min-height: 90vh;
 
@@ -85,7 +80,6 @@
     
         animation: disappearAndHold 2s ease forwards, zoomIn 1.5s ease-in-out 2s forwards;
     }
-    
 }
 
 img{
@@ -116,7 +110,7 @@ h1{
 
     z-index: 2;
     
-    animation: disappearAndHold 3s ease forwards, slideInFromRight 1.5s ease-in 1.75s forwards, bounceLeft 2.5s ease-in-out 3.5s forwards;
+    animation: disappearAndHold 3s ease forwards, slideInFromRight 1.5s ease-in 1.75s forwards, bounceLeft 2.5s ease-in-out 3.25s forwards;
 }
 
 h2{
@@ -129,5 +123,5 @@ h2{
 
     z-index: 2;
 
-    animation: disappearAndHold 3s ease forwards, slideInFromLeft 1.5s ease-in 1.75s forwards, bounceRight 2.5s ease-in-out 3.55s forwards;
+    animation: disappearAndHold 3s ease forwards, slideInFromLeft 1.5s ease-in 1.75s forwards, bounceRight 2.5s ease-in-out 3.25s forwards;
 }
