@@ -1,8 +1,8 @@
 [
     {
       "name": "Alura",
-      "place": "Alura Argentina",
-      "date": "2024",
+      "place": "Alura ONE",
+      "date": "abr 2023 - dic 2023",
       "description": "Curso intensivo de programación Backend implementando Java Springboot y MySQL, enfocado en el desarrollo de APIs stateless, mediante JWT para la autenticación.",
       "img": null,
       "subjects": ["Spring Data", "MySQL", "Spring Security", "Java", "Spring Boot"]
@@ -10,7 +10,7 @@
     {
       "name": "Programa Oracle ONE - Backend",
       "place": "Instituto ISFT N°151",
-      "date": null,
+      "date": "abr 2023 - dic 2023",
       "description": "Tecnicatura en análisis de sistemas en el Instituto ISFT N°151.",
       "img": null,
       "subjects": ["Ciencias de la computación", "Diseño de algoritmos", "C++", "Administración de sistemas", "Eficacia organizacional", "Análisis de requisitos", "Lenguaje unificado de modelado (UML)", "Herramientas UML"]
@@ -18,7 +18,7 @@
     {
       "name": "Licenciatura en Ciencias Físicas",
       "place": "Universidad Nacional de Mar del Plata",
-      "date": null,
+      "date": "abr 2023 - dic 2023",
       "description": "Cursé la Licenciatura en Física, adquiriendo conocimientos en física general, física mecánica, álgebra lineal, cálculo, ciencias de la tierra y metodología de la investigación.",
       "img": null,
       "subjects": ["Física", "Álgebra lineal", "Cálculo", "Análisis matemático", "Ciencias de la Tierra"]
@@ -26,7 +26,7 @@
     {
       "name": "Licenciatura en Psicología",
       "place": "Universidad Nacional de Mar del Plata",
-      "date": null,
+      "date": "abr 2023 - dic 2023",
       "description": "Cursé la Licenciatura en Psicología, desarrollando conocimientos en Psicología, Epistemología, Metodología de la investigación, Filosofía, Historia social, Sociología y el análisis de dinámicas grupales e interpersonales.",
       "img": null,
       "subjects": ["Habilidades sociales", "Psicología", "Psicología social", "Psicología del desarrollo", "Psicología clínica", "Filosofía de la ciencia", "Metodología de la ciencia", "Historia social", "Sociología", "Antropología"]
@@ -34,7 +34,7 @@
     {
       "name": "Desarrollador FullStack Js",
       "place": "Cilsa Argentina",
-      "date": null,
+      "date": "abr 2023 - dic 2023",
       "description": "Curso de programación Fullstack en JavaScript.",
       "img": null,
       "subjects": ["Node.js", "Next.js", "React.js", "MySQL", "Tailwind CSS", "Bootstrap", "Prisma"]
@@ -42,7 +42,7 @@
     {
       "name": "Programador Fullstack Java",
       "place": "Codo a Codo Argentina",
-      "date": null,
+      "date": "abr 2023 - dic 2023",
       "description": "Curso de programación FullStack en Java impulsado por Codo a Codo Argentina.",
       "img": null,
       "subjects": ["Java", "Spring Boot", "JavaScript", "MySQL", "Modelo-Vista-Controlador (MVC)", "CSS", "Bootstrap", "HTML5"]
@@ -50,7 +50,7 @@
     {
       "name": "Programador",
       "place": "Instituto de formación profesional N° 415",
-      "date": null,
+      "date": "abr 2023 - dic 2023",
       "description": "Curso anual de formación en Programación, cubriendo temas tanto de backend como frontend.",
       "img": null,
       "subjects": ["C#", "Unity", "Java", "JavaScript", "HTML5", "CSS", "Tailwind CSS"]
@@ -58,7 +58,7 @@
     {
       "name": "Programación Web",
       "place": "Instituto de formación profesional N° 415",
-      "date": null,
+      "date": "abr 2023 - dic 2023",
       "description": "Curso de formación en Programación Web fullstack.",
       "img": null,
       "subjects": ["React.js", "Next.js", "Node.js", "JavaScript", "HTML5", "CSS", "Bootstrap", "Tailwind CSS", "MySQL", "MongoDB"]
@@ -66,7 +66,7 @@
     {
       "name": "Administrador de Bases de Datos",
       "place": "Instituto de formación profesional N° 415",
-      "date": null,
+      "date": "abr 2023 - dic 2023",
       "description": "Curso de administración de bases de datos, tanto relacionales como no relacionales, con un enfoque en SQL.",
       "img": null,
       "subjects": ["MongoDB", "MySQL", "SQL", "Microsoft SQL Server"]
@@ -74,7 +74,7 @@
     {
       "name": "Programación Avanzada en Python para Ciencia de Datos",
       "place": "Instituto de formación profesional N° 415",
-      "date": null,
+      "date": "abr 2023 - dic 2023",
       "description": "Curso de programación en Python, usando Numpy y Pandas para análisis de datos.",
       "img": null,
       "subjects": ["Pandas", "MySQL", "NumPy", "Bases de datos", "Python", "Análisis de datos estadísticos"]
@@ -82,7 +82,7 @@
     {
       "name": "Programador en Python",
       "place": "Instituto de formación profesional N° 415",
-      "date": null,
+      "date": "abr 2023 - dic 2023",
       "description": "Curso de programación en Python orientado al desarrollo de algoritmos y manejo de datos.",
       "img": null,
       "subjects": ["Programación orientada a objetos (POO)", "Desarrollo de algoritmos", "Python", "SQLite"]
@@ -90,7 +90,7 @@
     {
       "name": "Programación en Java",
       "place": "Instituto de formación profesional N° 415",
-      "date": null,
+      "date": "abr 2023 - dic 2023",
       "description": "Curso de programación en Java, con enfoque en estructuras de datos, algoritmos y interfaces gráficas con Java Swing.",
       "img": null,
       "subjects": ["Java Swing", "Programación orientada a objetos (POO)", "Desarrollo de algoritmos"]
