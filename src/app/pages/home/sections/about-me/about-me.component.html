@@ -7,25 +7,21 @@
 
     <article>
         <div id="personal-intro">
-            <p class="bg-glass">
+            <p class="bg-glass-dark">
                 Soy un desarrollador fullstack apasionado por el diseño y la implementación de soluciones de software escalables y eficientes. 
                 Mi experiencia abarca lenguajes como <span>Java, C++, Python, JavaScript, PHP y SQL</span>, lo que me permite abordar proyectos desde múltiples perspectivas y entregar resultados de alta calidad.
             </p>
-            <p class="bg-glass">
+            <p class="bg-glass-dark">
                 Actualmente estoy cursando la <span>Tecnicatura en Análisis de Sistemas</span>, complementada con múltiples cursos especializados. Mi objetivo es certificar mis conocimientos, adquirir nuevas competencias y mantenerme siempre actualizado con las últimas tendencias tecnológicas.
             </p>
         </div>
 
-        <div id="image-container" class="bg-glass">
+        <div id="image-container" class="bg-glass-dark">
             <img src="images/profile-2.jpeg" alt="foto de perfil" class="profile-img">
         </div>
     </article>
 
-    <div id="buttons-container">
-        <app-button [text]="'Ver curriculum'" [action]="downloadCV"></app-button>
-
-        <app-button [text]="'Ver linkedIn'" [action]="visitLinkedIn"></app-button>    
-    </div>
+    <app-currvitae-btns></app-currvitae-btns>
 
     <app-button-arrow [section]="'#contact'" [sectionName]="'Contacto'"></app-button-arrow>
 

@@ -152,3 +152,7 @@ h2{
 
     animation: disappearAndHold 3s ease forwards, slideInFromLeft 1.5s ease-in 1.75s forwards, bounceRight 2.5s ease-in-out 3.25s forwards;
 }
+
+#btns-container{
+    animation: zoomIn 3.95s ease-in-out forwards;
+}

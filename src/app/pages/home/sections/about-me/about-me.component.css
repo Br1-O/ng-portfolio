@@ -23,6 +23,7 @@
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    width: 100%;
 }
 
 @media (min-width: 768px){
@@ -31,6 +32,14 @@
         width: 90%;
     }
 
+    #about-me article{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        max-width: 70%;
+    }
 }
 
 #personal-intro{
@@ -49,9 +58,10 @@
 @media (min-width: 768px){
     #personal-intro{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        max-width: 50%;
     }
 }
 
@@ -59,6 +69,7 @@
     border: 1px solid var(--font-hover-color);
     border-radius: 10px;
     padding: 1rem;
+    margin-bottom: 1.75rem;
 
     background: linear-gradient(135deg, #fffffff5, var(--secondary-color), #ffffff98);
     color: var(--font-color);
@@ -81,18 +92,10 @@
     border-radius: 10px;
     padding: 0.5rem;
 
-    transform: rotate(-5deg);
+    transform: rotate(5deg);
 }
 
 .profile-img{
     border-radius: 10px;
     max-width: 10rem;
-}
-
-#buttons-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
 }
