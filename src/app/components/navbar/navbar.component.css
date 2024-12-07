@@ -142,6 +142,13 @@ header{
         -webkit-backdrop-filter: none;
         box-shadow: none;
     }
+
+    #navbar-menu a{
+        color: var(--font-color);
+        font-size: 1.5rem;
+        display: inline-block;
+        white-space: nowrap;
+    }
 }
 
 
