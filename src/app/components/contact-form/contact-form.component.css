@@ -43,6 +43,7 @@ small{
 
 #contact-form textarea{
     width: 100%;
+    font-size: 1.25rem;
 }
 
 @media (min-width: 768px){
@@ -63,6 +64,29 @@ small{
         justify-content: start;
         align-items: center;
         gap: 1rem;
+        width: 90%;
+    }
+
+    #contact-form input{
+        width: 90%;
+    }
+
+    #contact-form textarea{
+        width: 90%;
+    }
+
+    #contact-form div div input{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1100px){
+    #contact-form div{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
         width: 70%;
     }
 
@@ -73,13 +97,13 @@ small{
     #contact-form textarea{
         width: 70%;
     }
-
-    #contact-form div div input{
-        width: 100%;
-    }
 }
 
 #btn-container{
     max-width: max-content;
     animation: zoomBounce 2.5s ease-in-out 2.5s infinite;
+}
+
+.swal2-toast{
+    font-size: 0.8rem;
 }

@@ -4,6 +4,7 @@ import { ButtonComponent } from '../button/button.component';
 import { Message } from '../../interfaces/message.interface';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FormPostService } from '../../services/form/form-post.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact-form',
@@ -36,16 +37,49 @@ export class ContactFormComponent {
       //get data from form
       const formData: Message = this.form.getRawValue();
 
-      //post request to endpoint
-      this.formPostService.postRequest(this.postUrl, formData).subscribe(
-        {
-          next: (response: any) => 
+      try {
+        //post request to endpoint
+        this.formPostService.postRequest(this.postUrl, formData).subscribe(
           {
-            alert('¡Formulario enviado correctamente!');
-            this.form.reset();
+            next: (response: any) => 
+            {
+              if (response.ok) {
+                Swal.fire({
+                  position: "bottom-end",
+                  icon: "success",
+                  title: "¡Mensaje enviado correctamente!",
+                  showConfirmButton: false,
+                  timer: 1500,
+                  timerProgressBar: true,
+                  width: "18rem"
+                });
+  
+                this.form.reset();
+              } else {
+                Swal.fire({
+                position: "bottom-end",
+                icon: "error",
+                title: "¡No se pudo enviar el mensaje!",
+                showConfirmButton: false,
+                timer: 1500,
+                timerProgressBar: true,
+                width: "18rem"
+                });
+              }
+            }
           }
-        }
-      );
+        );
+      } catch (error) {
+        Swal.fire({
+          position: "bottom-end",
+          icon: "error",
+          title: "¡No se pudo enviar el mensaje!",
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          width: "18rem"
+        });
+      }
 
     } else {
       // Mark all fields to show validation messages
