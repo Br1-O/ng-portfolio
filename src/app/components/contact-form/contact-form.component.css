@@ -78,3 +78,8 @@ small{
         width: 100%;
     }
 }
+
+#btn-container{
+    max-width: max-content;
+    animation: zoomBounce 2.5s ease-in-out 2.5s infinite;
+}

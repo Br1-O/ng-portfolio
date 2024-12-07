@@ -856,6 +856,27 @@ body::before {
   }
 }
 
+@keyframes textColorTransition-toLight {
+    0% {
+      color: var(--font-color);
+    }
+    20% {
+      color: #7c7c7c; /* Intermediate color 1 */
+    }
+    40% {
+      color: #b0b0b0; /* Intermediate color 2 */
+    }
+    60% {
+      color: #d4d4d4; /* Intermediate color 3 */
+    }
+    80% {
+      color: var(--font-hover-color); /* Final color */
+    }
+    100% {
+      color: var(--font-hover-color);
+    }
+}
+
 @keyframes glow-box {
   0% {
     box-shadow: 0 0 10px #00f4ff, 0 0 20px #0ff;
