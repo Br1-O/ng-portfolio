@@ -24,7 +24,7 @@
 
 #about-me article{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
@@ -40,11 +40,27 @@
 
     #about-me article{
         display: flex;
-        flex-direction: row;
+        flex-direction: row !important;
         justify-content: center;
         align-items: center;
         gap: 1.5rem;
         max-width: 70%;
+    }
+
+    .image-container{
+        border: 1px solid var(--font-hover-color);
+        border-radius: 10px;
+        padding: 0.5rem;
+    
+        background: linear-gradient(135deg, #fffffff5, var(--secondary-color), #ffffff98);
+    
+        transform: rotate(5deg);
+
+        order: 2;
+    }
+    
+    .image-container:nth-of-type(1){
+        transform: rotate(-5deg);
     }
 }
 
@@ -59,6 +75,8 @@
     line-height: 1.25;
 
     margin-bottom: 1rem;
+
+    order: 2;
 }
 
 @media (min-width: 768px){
@@ -68,6 +86,8 @@
         justify-content: center;
         align-items: flex-start;
         max-width: 50%;
+
+        order: 1;
     }
 }
 
@@ -102,6 +122,8 @@
     background: linear-gradient(135deg, #fffffff5, var(--secondary-color), #ffffff98);
 
     transform: rotate(5deg);
+
+    order: 1;
 }
 
 .interests :nth-child(even){
