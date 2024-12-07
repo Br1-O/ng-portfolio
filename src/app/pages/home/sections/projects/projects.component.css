@@ -11,12 +11,32 @@
     padding: 7.1rem;
 
     border: 0.5px solid var(--font-hover-color);
-    border-top: 2px solid var(--font-hover-color);
-    border-bottom: 2px solid var(--font-hover-color);
-    border-radius: 30% 0;
+    border-radius: 15px;
 
     overflow: hidden;
 }
+
+@media (min-width: 446px){
+    #projects{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        width: 100%;
+        margin: 0px auto;    
+        min-height: 80vh;
+        
+        padding: 7.1rem;
+    
+        border: 0.5px solid var(--font-hover-color);
+        border-top: 2px solid var(--font-hover-color);
+        border-bottom: 2px solid var(--font-hover-color);
+        border-radius: 30% 0;
+    
+        overflow: hidden;
+    }
+  }
 
 #projects.visible{
     animation: scrollRevealOpacity 1.5s ease;

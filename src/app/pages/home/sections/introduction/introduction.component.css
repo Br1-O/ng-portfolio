@@ -69,7 +69,43 @@
 
     box-sizing: border-box;
 
-    animation: disappearAndHold 2s ease forwards, zoomIn 1.5s ease-in-out 2s forwards;
+    animation: disappearAndHold 2s ease forwards, zoomIn 1.5s ease-in-out 2s forwards, zoomBounce 2s ease-in-out 3.5s forwards;
+}
+
+
+img{
+    object-fit: cover;
+    width: 100%;
+}
+
+h1{
+    font-size: 4rem;
+
+    letter-spacing: 1px;
+    line-height: 1.2;
+
+    text-align: center;
+
+    z-index: 2;
+    
+    animation: disappearAndHold 3s ease forwards, slideInFromRight 1.5s ease-in 1.75s forwards, bounceLeft 2.5s ease-in-out 3.25s forwards;
+}
+
+h2{
+    font-size: 2rem;
+
+    letter-spacing: 1px;
+    line-height: 1.2;
+    
+    text-align: center;
+
+    z-index: 2;
+
+    animation: disappearAndHold 3s ease forwards, slideInFromLeft 1.5s ease-in 1.75s forwards, bounceRight 2.5s ease-in-out 3.25s forwards;
+}
+
+#btns-container{
+    animation: disappearAndHold 3s ease forwards, zoomIn 2.5s ease-in-out 2s forwards, zoomBounce 2s ease-in-out 4.5s infinite;
 }
 
 @media (min-width: 992px){
@@ -91,7 +127,7 @@
 
         box-sizing: border-box;
     
-        animation: disappearAndHold 2s ease forwards, zoomIn 1.5s ease-in-out 2s forwards;
+        animation: disappearAndHold 2s ease forwards, zoomIn 1.5s ease-in-out 2s forwards, zoomBounce 2s ease-in-out 3.5s forwards;
     }
 
     h1{
@@ -132,7 +168,7 @@
 
         box-sizing: border-box;
     
-        animation: disappearAndHold 2s ease forwards, zoomIn 1.5s ease-in-out 2s forwards;
+        animation: disappearAndHold 2s ease forwards, zoomIn 1.5s ease-in-out 2s forwards, zoomBounce 2s ease-in-out 3.5s forwards;
     }
 
     h1{
@@ -178,7 +214,7 @@
 
         box-sizing: border-box;
     
-        animation: disappearAndHold 2s ease forwards, zoomIn 1.5s ease-in-out 2s forwards;
+        animation: disappearAndHold 2s ease forwards, zoomIn 1.5s ease-in-out 2s forwards, zoomBounce 2s ease-in-out 3.5s forwards;
     }
 
     h1{
@@ -198,39 +234,4 @@
 
         animation: disappearAndHold 3s ease forwards, slideInFromLeft 1.5s ease-in 1.75s forwards, bounceRight 2.5s ease-in-out 3.25s forwards;
     }
-}
-
-img{
-    object-fit: cover;
-    width: 100%;
-}
-
-h1{
-    font-size: 4rem;
-
-    letter-spacing: 1px;
-    line-height: 1.2;
-
-    text-align: center;
-
-    z-index: 2;
-    
-    animation: disappearAndHold 3s ease forwards, slideInFromRight 1.5s ease-in 1.75s forwards, bounceLeft 2.5s ease-in-out 3.25s forwards;
-}
-
-h2{
-    font-size: 2rem;
-
-    letter-spacing: 1px;
-    line-height: 1.2;
-    
-    text-align: center;
-
-    z-index: 2;
-
-    animation: disappearAndHold 3s ease forwards, slideInFromLeft 1.5s ease-in 1.75s forwards, bounceRight 2.5s ease-in-out 3.25s forwards;
-}
-
-#btns-container{
-    animation: zoomIn 3.95s ease-in-out forwards;
 }

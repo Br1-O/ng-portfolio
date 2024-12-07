@@ -45,7 +45,7 @@
     display: inline;
     background: linear-gradient(90deg, transparent 50%, var(--font-hover-color) 50%);
     background-clip: text;
-    color: var(--font-color);
+    color: var(--font-hover-color);
     transition: color 0.3s ease-in-out;
 }
   

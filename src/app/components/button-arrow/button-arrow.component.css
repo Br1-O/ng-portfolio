@@ -13,6 +13,7 @@ div{
     justify-self: center;
     align-self: center;
     z-index: 10; 
+    animation: zoomBounce 2s ease-in-out 3.5s infinite;
 }
 
 
@@ -28,4 +29,8 @@ i{
     transform: scaleX(0.75); 
     color: var(--font-hover-color);
     vertical-align: middle;
+}
+
+div:hover i{
+    color: var(--main-color);
 }

@@ -21,6 +21,7 @@ footer{
     margin-bottom: 1rem;
     font-size: 2rem;
     width: fit-content; 
+    color: var(--font-hover-color);
 }
 
 #footer-contact p{
