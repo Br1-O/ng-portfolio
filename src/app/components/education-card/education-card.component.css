@@ -34,7 +34,7 @@
 .content{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     gap: 1rem;
     min-width: 100%;
@@ -110,6 +110,7 @@ h4{
     }
     
     .content{
+        font-size: 1.15rem;
         width: 100%;
         min-height: 10rem;
     }
