@@ -30,7 +30,7 @@ export class EducationComponent implements OnInit{
       // Calculate % of the window's height
       const threshold = window.innerHeight * 0.4;
         
-      // Check if at least 20% of the element is in view from the top or bottom
+      // Check if at least % of the element is in view from the top or bottom
       const topInView2 = rect.top < window.innerHeight - threshold && rect.top + rect.height > threshold;
       const bottomInView = rect.bottom > threshold && rect.bottom < window.innerHeight + threshold;
 
