@@ -5,7 +5,7 @@
     
     <div class="image-container">
         <a [href]="project.homepage || '#'" target="_blank" rel="noopener noreferrer">
-            <img [src]="project.img" alt="project.name">
+            <img [src]="project.img" [attr.alt]="'vista previa del proyecto ' + project.name">
         </a>
     </div>
     

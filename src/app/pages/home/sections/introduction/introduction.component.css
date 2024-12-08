@@ -111,7 +111,7 @@ h2{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 3.5rem;
+    gap: 2rem;
 }
 
 #btns-container app-currvitae-btns{
@@ -186,6 +186,18 @@ h2{
         z-index: 2;
     
         animation: disappearAndHold 3s ease forwards, slideInFromLeft 1.5s ease-in 1.75s forwards, bounceRight 2.5s ease-in-out 3.25s forwards;
+    }
+
+    
+    #btns-container{
+        position: absolute;
+        top: 75%;
+        margin: 0.5rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2.75rem;
     }
 }
     
@@ -273,6 +285,17 @@ h2{
         line-height: 1.2;
     
         animation: disappearAndHold 3s ease forwards, slideInFromLeft 1.5s ease-in 1.75s forwards, bounceRight 2.5s ease-in-out 3.25s forwards;
+    }
+    
+    #btns-container{
+        position: absolute;
+        top: 75%;
+        margin: 0.5rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3.5rem;
     }
 }
 
