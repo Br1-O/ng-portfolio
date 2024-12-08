@@ -19,7 +19,7 @@
     "name": "Licenciatura en Ciencias Físicas",
     "place": "Universidad Nacional de Mar del Plata",
     "date": "mar 2017",
-    "description": "Cursé la Licenciatura en Física desde 2017 hasta 2019. Durante este tiempo adquirí conocimientos en física general, física mecánica, algebra lineal, cálculo, ciencias de la tierra y metodología de la investigación. Sin embargo, decidí orientar mi carrera hacia el sector IT, buscando un enfoque más aplicado y práctico.",
+    "description": "Cursé la Licenciatura en Física entre 2017 y 2019. Durante este tiempo adquirí conocimientos en física general, física mecánica, algebra lineal, cálculo, ciencias de la tierra y metodología de la investigación.",
     "img": null,
     "subjects": [" Física", "Cálculo", " Álgebra Lineal", " Ciencias de la Tierra"]
   },
@@ -27,7 +27,7 @@
     "name": "Licenciatura en Psicología",
     "place": "Universidad Nacional de Mar del Plata",
     "date": "mar 2012",
-    "description": "Cursé la Licenciatura en Psicología entre 2012 y 2015, desarrollando diversos conocimientos tanto en Psicología como Epistemología, Metodología de la investigación, Filosofía, Historia social, Sociología y el análisis activo de las dinámicas grupales e interpersonales. Fue durante este periodo que descubrí un creciente interés por las ciencias exactas y la tecnología, lo que me motivó a redirigir mi formación.",
+    "description": "Cursé la Licenciatura en Psicología entre 2012 y 2015, desarrollando diversos conocimientos tanto en Psicología como Epistemología, Metodología de la investigación, Filosofía, Historia social, Sociología y el análisis de dinámicas grupales e interpersonales. ",
     "img": null,
     "subjects": [" Psicología Social", " Epistemología", " Metodología de la Investigación", " Sociología"]
   },

@@ -2393,37 +2393,8 @@ body section:hover{
 }
 
 .btn-arrow-container{
-  position: absolute;
-  bottom: 2%;
-  right: 41.5%; 
+  margin: 0px auto;
   z-index: 10;  
-}
-
-@media (min-width: 576px){
-    .btn-arrow-container{
-        position: absolute;
-        bottom: 2%;
-        right: 42.75%; 
-        z-index: 10;  
-    }
-}
-
-@media (min-width: 768px){
-    .btn-arrow-container{
-        position: absolute;
-        bottom: 2%;
-        right: 45.5%; 
-        z-index: 10;  
-    }
-}
-
-@media (min-width: 1200px){
-    .btn-arrow-container{
-        position: absolute;
-        bottom: 2%;
-        right: 47%; 
-        z-index: 10;  
-    }
 }
 
 footer app-button button span{
