@@ -1,4 +1,10 @@
 .content {
-    margin-top: 7rem; /* height of the navbar */
+    margin-top: 5rem; /* height of the navbar */
     flex-grow: 1;
+}
+
+@media (min-width: 768px){
+    .content {
+        margin-top: 7rem;
+    }
 }
