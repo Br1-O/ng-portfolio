@@ -1,0 +1,196 @@
+{
+  "NAVBAR":
+  {
+    "ITEM-1": "Proyectos",
+    "ITEM-2": "Educación",
+    "ITEM-3": "Sobre mí",
+    "ITEM-4": "Contacto"
+  },
+  "INTRODUCTION": 
+  {
+    "TITLE": "¡Hola, soy Bruno Ortuño!",
+    "SUBTITLE": "Desarrollador Web Fullstack"
+  },
+  "PROJECTS":
+  {
+    "TITLE": "Mis Proyectos"
+  },
+  "EDUCATION":
+  {
+    "TITLE": "Educación",
+
+    "EDUCATIONS":
+    [
+      {
+        "name": "Tecnicatura en Análisis de Sistemas",
+        "place": "ISFT N°151",
+        "date": "mar 2024 - dic 2026",
+        "description": "Conocimientos en diseño de algoritmos, análisis de requisitos, UML y administración de sistemas.",
+        "img": null,
+        "subjects": [" C++", " UML", " Ciencias de la Computación", " Eficacia Organizacional"]
+      },
+      {
+        "name": "Programación Backend en Java",
+        "place": "Alura",
+        "date": "abr 2023 - oct 2023",
+        "description": "Implementación de APIs stateless con Java Spring Boot y MySQL. Uso de JWT para autenticación y Spring Data para persistencia.",
+        "img": null,
+        "subjects": [" Java", " Spring Boot", " Spring Security", " MySQL"]
+      },
+      {
+        "name": "Licenciatura en Ciencias Físicas",
+        "place": "Universidad Nacional de Mar del Plata",
+        "date": "mar 2017",
+        "description": "Cursé la Licenciatura en Física entre 2017 y 2019. Durante este tiempo adquirí conocimientos en física general, física mecánica, algebra lineal, cálculo, ciencias de la tierra y metodología de la investigación.",
+        "img": null,
+        "subjects": [" Física", " Cálculo", " Álgebra Lineal", " Ciencias de la Tierra"]
+      },
+      {
+        "name": "Licenciatura en Psicología",
+        "place": "Universidad Nacional de Mar del Plata",
+        "date": "mar 2012",
+        "description": "Cursé la Licenciatura en Psicología entre 2012 y 2015, desarrollando diversos conocimientos tanto en Psicología como Epistemología, Metodología de la investigación, Filosofía, Historia social, Sociología y el análisis de dinámicas grupales e interpersonales. ",
+        "img": null,
+        "subjects": [" Psicología Social", " Epistemología", " Metodología de la Investigación", " Sociología"]
+      },
+      {
+        "name": "Desarrollo FullStack con Java",
+        "place": "Codo a Codo - Argentina",
+        "date": "mar 2024 - jul 2024",
+        "description": "Curso de desarrollo fullstack con Java implementando SpringBoot, MySQL y tecnologías frontend como JavaScript, HTML5, CSS y Bootstrap.",
+        "img": null,
+        "subjects": [" Java", " Spring Boot", " MVC", " JavaScript"]
+      },
+      {
+        "name": "Desarrollador FullStack JavaScript",
+        "place": "Cilsa Arg.",
+        "date": "jun 2024 - nov 2024",
+        "description": "Desarrollo de aplicaciones con Node.js, React.js y Next.js. Uso de herramientas como Tailwind CSS, Prisma y Bootstrap.",
+        "img": null,
+        "subjects": [" Node.js", " React.js", " MySQL", " Tailwind CSS"]
+      },  
+      {
+        "name": "Programador",
+        "place": "Instituto de Formación Profesional N°415",
+        "date": "abr 2023 - nov 2023",
+        "description": "Curso anual de formación en Programación. Se trataron temas tanto de backend para aplicaciones de escritorio, web, y juegos así como frontend web.",
+        "img": null,
+        "subjects": [" MySQL", " C#", " Unity", " Java", " Javascript", " HTML", " CSS", " Tailwind CSS", " BootStrap"]
+      },
+      {
+        "name": "Programación Web",
+        "place": "Instituto de Formación Profesional N°415",
+        "date": "jul 2023 - nov 2023",
+        "description": "Curso de formación en Programación Web fullstack.",
+        "img": null,
+        "subjects": [" React.js", " Next.js", " Node.js", " MongoDB", " MySQL", " Javascript", " HTML", " CSS", " Tailwind CSS", " BootStrap"]
+      },
+      {
+        "name": "Administrador de Bases de Datos",
+        "place": "Instituto de Formación Profesional N°415",
+        "date": "mar 2023 - ago 2023",
+        "description": "Gestión de bases de datos relacionales y no relacionales. Enfoque en SQL aplicado a proyectos funcionales con MySQL.",
+        "img": null,
+        "subjects": [" MySQL", " MongoDB", " SQL", " Microsoft SQL Server"]
+      },
+      {
+        "name": "Programación Avanzada en Python para Ciencia de Datos",
+        "place": "Instituto de Formación Profesional N°415",
+        "date": "may 2023 - jul 2023",
+        "description": "Análisis de datos con NumPy y Pandas, integrados con MySQL para persistencia.",
+        "img": null,
+        "subjects": [" Python", " NumPy", " Pandas", " MySQL"]
+      },
+      {
+        "name": "Programación en Python",
+        "place": "Instituto de Formación Profesional N°415",
+        "date": "mar 2023 - may 2023",
+        "description": "Curso de programación en Python orientado al desarrollo de algoritmos y manejo de datos.",
+        "img": null,
+        "subjects": [" Python", " POO", " SQLite", " Desarrollo de Algoritmos", " Estructuras de datos"]
+      },
+      {
+        "name": "Programación en Java",
+        "place": "Instituto de Formación Profesional N°415",
+        "date": "mar 2023 - may 2023",
+        "description": "Curso de programación en Java orientado a la comprensión de estructuras de datos, algoritmos, programación orientada a objetos y el desarrollo de interfaces gráficas implementando java swing.",
+        "img": null,
+        "subjects": [" Java", " Java Swing", " POO", " Desarrollo de Algoritmos", " Estructuras de datos"]
+      },
+      {
+        "name": "Datascience en Python",
+        "place": "Argentina Programa",
+        "date": "dic 2022 - mar 2023",
+        "description": "Curso de análisis de datos en Python usando las librerias Pandas y Numpy, así como una breve introducción a Machine Learning.",
+        "img": null,
+        "subjects": [" Python", " Numpy", " Pandas", " Machine Learning", " Análisis de datos estadísticos"]
+      },
+      {
+        "name": "Desarrollo frontend",
+        "place": "Argentina Programa",
+        "date": "nov 2022 - feb 2023",
+        "description": "Curso de desarrollo FrontEnd enfocado en el desarrollo de una página portfolio usando HTML, CSS, JavaScript y Bootstrap.",
+        "img": null,
+        "subjects": [" Javascript", " HTML", " CSS", " Bootstrap"]
+      },
+      {
+        "name": "Introducción a Javascript y Ruby",
+        "place": "Argentina Programa",
+        "date": "ago 2022 - oct 2022",
+        "description": "Curso introductorio en el uso de JavaScript y Ruby.",
+        "img": null,
+        "subjects": [" Ruby", " Javascript", " Pensamiento computacional"]
+      }
+    ]
+  },
+  "ABOUT_ME": 
+  {
+    "TITLE": "Sobre mí",
+
+    "P-1-1": "Soy un desarrollador fullstack apasionado por el diseño y la implementación de soluciones de software escalables y eficientes. Mi experiencia abarca lenguajes como",
+    "P-1-SPAN": "Java, C++, Python, JavaScript, PHP y SQL",
+    "P-1-2": "lo que me permite abordar proyectos desde múltiples perspectivas y entregar resultados de alta calidad.",
+
+    "P-2-1": "Actualmente estoy cursando la",
+    "P-2-SPAN": "Tecnicatura en Análisis de Sistemas",
+    "P-2-2": ", complementada con múltiples cursos especializados. Mi objetivo es certificar mis conocimientos, adquirir nuevas competencias y mantenerme siempre actualizado con las últimas tendencias tecnológicas.",
+
+    "P-3-1": "Entre mis aficiones se encuentran los juegos de mesa que involucran la lógica, estrategia y administración de recursos, destacandose entre ellos el",
+    "P-3-SPAN": "ajedrez",
+    "P-3-2": "y juegos de mesa modernos del tipo europeo.",
+
+    "P-4-1": "Disfruto de aprender cosas nuevas, entre ellas nuevos",
+    "P-4-SPAN": "idiomas",
+    "P-4-2": "ya que estos me permiten ver peliculas y series sin sufrir de la perdida de significado que se produce en las traducciones."
+  },
+  "FOOTER":
+  {
+    "TITLE": "¡Hola, soy Bruno Ortuño!",
+    "P-1": "Estoy a su disposición para llevar sus ideas a la práctica de la mejor forma posible.",
+    "P-2": "Sientase libre de contactarme por alguna de las siguientes vias:"
+  },
+  "CONTACT-FORM":
+  {
+    "LABEL-NAME": "Nombre completo",
+    "LABEL-NAME-PLACEHOLDER": "Ingrese su nombre",
+    "LABEL-NAME-ERR1": "El nombre es obligatorio.",
+    "LABEL-NAME-ERR2": "Debe tener al menos 3 caracteres.",
+
+    "LABEL-EMAIL": "Correo electrónico",
+    "LABEL-EMAIL-PLACEHOLDER": "Ingrese su email",
+    "LABEL-EMAIL-ERR1": "El correo es obligatorio.",
+    "LABEL-EMAIL-ERR2": "El correo no es válido.",
+
+    "LABEL-SUBJECT": "Asunto",
+    "LABEL-SUBJECT-PLACEHOLDER": "Ingrese el motivo",
+    "LABEL-SUBJECT-ERR1": "El asunto es obligatorio.",
+    "LABEL-SUBJECT-ERR2": "Debe tener al menos 3 caracteres.",
+
+    "LABEL-MESSAGE": "Consulta",
+    "LABEL-MESSAGE-PLACEHOLDER": "Ingrese su consulta",
+    "LABEL-MESSAGE-ERR1": "La consulta es obligatoria.",
+    "LABEL-MESSAGE-ERR2": "Debe tener al menos 10 caracteres.",
+
+    "BTN-TEXT": "Enviar Mensaje"
+  }    
+}
