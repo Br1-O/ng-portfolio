@@ -1,0 +1,8 @@
+<label for="toggle" class="button">
+    <input 
+    type="checkbox" 
+    id="toggle"
+    [checked]="currentLang === 'es'"
+    (change)="toggleLanguage($event)">
+    <span class="slider"></span>
+</label>

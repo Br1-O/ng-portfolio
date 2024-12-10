@@ -222,6 +222,9 @@
     "MESSAGE-ERR1": "La consulta es obligatoria.",
     "MESSAGE-ERR2": "Debe tener al menos 10 caracteres.",
 
-    "BTN-SUBMIT": "Enviar Mensaje"
+    "BTN-SUBMIT": "Enviar Mensaje",
+
+    "SUCCESS-MESSAGE": "¡Mensaje enviado correctamente!",
+    "ERROR-MESSAGE": "¡No se pudo enviar el mensaje!"
   }    
 }

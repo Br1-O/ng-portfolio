@@ -214,6 +214,9 @@
       "MESSAGE-ERR1": "Message is required.",
       "MESSAGE-ERR2": "It must have at least 15 characters.",
   
-      "BTN-SUBMIT": "Send Message"
+      "BTN-SUBMIT": "Send Message",
+
+      "SUCCESS-MESSAGE": "Message sent successfully!",
+      "ERROR-MESSAGE": "The message couldn't be sent!"
     }
 }

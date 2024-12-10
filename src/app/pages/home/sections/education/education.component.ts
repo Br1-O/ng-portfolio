@@ -2,7 +2,6 @@ import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonArrowComponent } from '../../../../components/button-arrow/button-arrow.component';
 import { EducationCardComponent } from '../../../../components/education-card/education-card.component';
-import { EducationService } from '../../../../services/education/education.service';
 import { Education } from '../../../../interfaces/education.interface';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -64,6 +63,11 @@ export class EducationComponent implements OnInit{
 
   ngOnInit(): void {
     this.loadEducationData();
+
+    // Subscribe to language change
+    this.translate.onLangChange.subscribe(() => {
+      this.loadEducationData(); // Reload education data whenever language changes
+    });
   }
 
   loadEducationData(): void {

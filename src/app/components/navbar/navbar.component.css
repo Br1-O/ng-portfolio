@@ -46,6 +46,7 @@ header{
     cursor: pointer;
     color: var(--font-hover-color);
     margin-right: 1rem;
+    order: 3;
 }
 
 #navbar-menu {
@@ -83,6 +84,17 @@ header{
     color: var(--font-hover-color);
     text-shadow: -2.5px -2.5px 7px var(--secondary-color), 2.5px 2.5px 2px var(--main-color);
     border-bottom: 1px solid var(--font-color);
+}
+
+#lang-switch-container{
+    max-height: 5rem;
+    padding: 0.25rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    order: 2;
 }
 
 #navbar-menu.active {
@@ -125,6 +137,10 @@ header{
         max-height: 5rem;
         min-height: 5rem;
         top: 1%;
+    }
+
+    header.scrolled #lang-switch-container{
+        display: none;
     }
 
     #logo-container{

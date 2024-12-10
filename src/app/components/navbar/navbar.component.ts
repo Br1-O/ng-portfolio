@@ -1,12 +1,13 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { ButtonLanguageComponent } from '../button-language/button-language.component';
 
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule, TranslateModule],
+  imports: [RouterModule, TranslateModule, ButtonLanguageComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
