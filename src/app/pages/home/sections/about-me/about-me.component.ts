@@ -1,9 +1,10 @@
 import { Component, HostListener } from '@angular/core';
 import { ButtonArrowComponent } from '../../../../components/button-arrow/button-arrow.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-me',
-  imports: [ButtonArrowComponent],
+  imports: [ButtonArrowComponent, TranslateModule],
   standalone: true,
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.css'

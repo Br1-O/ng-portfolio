@@ -1,7 +1,7 @@
 <header class="bg-glass" [class.scrolled]="isScrolled">
     <a href="#">
         <div id="logo-container">
-            <img src="images/logo-low.png" alt="logo de la pagina con la letra B y la letra O" id="navbar-logo">
+            <img src="images/logo-low.png" [attr.alt]="'NAVBAR.ALT-IMG-LOGO' | translate" id="navbar-logo">
         </div>
     </a>
 
@@ -10,22 +10,22 @@
     <ul id="navbar-menu" [class.active]="isMenuActive">
         <li class="nav-item">  
             <a href="#projects" (click)="toggleMenu()">
-                Proyectos
+                {{'NAVBAR.ITEM-1' | translate}}
             </a>
         </li>
         <li class="nav-item">  
             <a href="#education" (click)="toggleMenu()">
-                Educación
+                {{'NAVBAR.ITEM-2' | translate}}
             </a>
         </li>
         <li class="nav-item">  
             <a href="#about-me" (click)="toggleMenu()">
-                Sobre mí
+                {{'NAVBAR.ITEM-3' | translate}}
             </a>
         </li>
         <li class="nav-item">  
             <a href="#contact" (click)="toggleMenu()">
-                Contacto
+                {{'NAVBAR.ITEM-4' | translate}}
             </a>
         </li>
     </ul>

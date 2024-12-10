@@ -2,42 +2,40 @@
 
     <h2 class="subtitle">
         <i class='bx bx-user' ></i>
-        <span>Sobre mí</span>
+        <span>{{ 'ABOUT-ME.TITLE' | translate }}</span>
     </h2>
 
     <article>
         <div class="personal-intro">
-            <p>
-                Soy un desarrollador fullstack apasionado por el diseño y la implementación de soluciones de software escalables y eficientes. 
-                Mi experiencia abarca lenguajes como <span>Java, C++, Python, JavaScript, PHP y SQL</span>, lo que me permite abordar proyectos desde múltiples perspectivas y entregar resultados de alta calidad.
+            <p> 
+                {{ 'ABOUT-ME.P-1-1' | translate }} <span>{{ 'ABOUT-ME.P-1-SPAN' | translate }}</span> {{ 'ABOUT-ME.P-1-2' | translate }}
             </p>
             <p>
-                Actualmente estoy cursando la <span>Tecnicatura en Análisis de Sistemas</span>, complementada con múltiples cursos especializados. Mi objetivo es certificar mis conocimientos, adquirir nuevas competencias y mantenerme siempre actualizado con las últimas tendencias tecnológicas.
+                {{ 'ABOUT-ME.P-2-1' | translate }} <span>{{ 'ABOUT-ME.P-2-SPAN' | translate }}</span> {{ 'ABOUT-ME.P-2-2' | translate }}
             </p>
         </div>
 
         <div class="image-container">
-            <img src="images/profile-2.jpeg" alt="foto de perfil con estilo dibujado" class="profile-img">
+            <img src="images/profile-2.jpeg" [attr.alt]="'ABOUT-ME.ALT-IMG-PROFILE' | translate" class="profile-img">
         </div>
     </article>
 
     <article>
         <div class="image-container bg-glass-dark">
-            <img src="images/pawn.avif" alt="foto de peón de ajedrez negro sobre fondo blanco" class="profile-img">
+            <img src="images/pawn.avif" [attr.alt]="'ABOUT-ME.ALT-IMG-HOBBIES' | translate" class="profile-img">
         </div>
 
         <div class="personal-intro interests">
             <p class="bg-glass-dark">
-                Entre mis aficiones se encuentran los juegos de mesa que involucran la lógica, estrategia y administración de recursos,
-                destacandose entre ellos el <span> ajedrez</span> y juegos de mesa modernos del tipo europeo.
+                {{ 'ABOUT-ME.P-3-1' | translate }} <span>{{ 'ABOUT-ME.P-3-SPAN' | translate }}</span> {{ 'ABOUT-ME.P-3-2' | translate }}
             </p>
             <p class="bg-glass-dark">
-                Disfruto de aprender cosas nuevas, entre ellas nuevos <span> idiomas</span>, 
-                ya que estos me permiten ver peliculas y series sin sufrir de la perdida de significado que se produce en las traducciones.
+                {{ 'ABOUT-ME.P-4-1' | translate }} <span>{{ 'ABOUT-ME.P-4-SPAN' | translate }}</span>, 
+                {{ 'ABOUT-ME.P-4-2' | translate }}
             </p>
         </div>
     </article>
 
-    <app-button-arrow [section]="'#contact'" [sectionName]="'Contacto'"></app-button-arrow>
+    <app-button-arrow [section]="'#contact'" [sectionName]="'ABOUT-ME.GO-TO-NEXT-SECTION' | translate"></app-button-arrow>
 
 </section>

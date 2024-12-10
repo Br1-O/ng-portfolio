@@ -5,18 +5,18 @@
     
     <div class="image-container">
         <a [href]="project.homepage || '#'" target="_blank" rel="noopener noreferrer">
-            <img [src]="project.img" [attr.alt]="'vista previa del proyecto ' + project.name">
+            <img [src]="project.img" [attr.alt]="('PROJECTS.ALT-IMG-PROJECT' | translate) + project.name">
         </a>
     </div>
     
     <p>{{ project.description }}</p>
     
     <div id="icons-container">
-        <a *ngIf="project.homepage" [href]="project.homepage || '#'" target="_blank" rel="noopener noreferrer">
-            <i class='bx bx-laptop' title="Ver sitio web"></i>
+        <a *ngIf="project.homepage" [href]="project.homepage || '#'" target="_blank" rel="noopener noreferrer" [title]="'PROJECTS.TITLE-ICON-COMPUTER' | translate">
+            <i class='bx bx-laptop' [attr.alt]="'PROJECTS.ALT-ICON-COMPUTER' | translate"></i>
         </a>
-        <a *ngIf="project.html_url" [href]="project.html_url" target="_blank" rel="noopener noreferrer">
-            <i class='bx bxl-github' title="Ver repositorio"></i>           
+        <a *ngIf="project.html_url" [href]="project.html_url" target="_blank" rel="noopener noreferrer" [title]="'PROJECTS.TITLE-ICON-GITHUB' | translate">
+            <i class='bx bxl-github' [attr.alt]="'PROJECTS.ALT-ICON-GITHUB' | translate"></i>           
         </a>
     </div>
     

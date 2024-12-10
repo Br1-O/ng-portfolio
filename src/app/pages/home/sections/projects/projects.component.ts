@@ -4,10 +4,11 @@ import { ProjectCardComponent } from '../../../../components/project-card/projec
 import { ButtonArrowComponent } from '../../../../components/button-arrow/button-arrow.component';
 import { ProjectsService } from '../../../../services/projects/projects.service';
 import { Repository } from '../../../../interfaces/repository.interface';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule, ProjectCardComponent, ButtonArrowComponent],
+  imports: [CommonModule, ProjectCardComponent, ButtonArrowComponent, TranslateModule],
   standalone: true,
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
@@ -67,19 +68,61 @@ export class ProjectsComponent implements OnInit {
     this.projectsService = projectsService;
   }
 
+  // Language variable
+  desiredLang : string = 'en';
+
   //on init
   ngOnInit(): void {
 
-    //add private projects cards
-    let privateProject: Repository = 
-    {
-      name: "NextFlix",
-      html_url: null,
-      homepage: "https://nextflix-br1.vercel.app/",
-      description: "Un clon fullstack funcional de Netflix, usando su propia base de datos para peliculas y usuarios.",
-      img: "https://i.imgur.com/0cG22c7.png",
-      topics: ["React.js", "Next.js", "JWT", "MongoDB"],
-    };
+    // Try to fetch user's selected language from local storage
+    let savedPreferences : string | null = localStorage.getItem("BrunoOrtunoPortfolio");
+
+    if (savedPreferences) {
+      let parsedPreferences = JSON.parse(savedPreferences);
+      this.desiredLang = parsedPreferences.lang;
+    }
+
+    let privateProject: Repository = {name: "", html_url: "", homepage: "", description: "", img: "", topics: []};
+
+    switch (this.desiredLang) {
+      case 'es':
+        //add private projects cards
+        privateProject = 
+        {
+          name: "NextFlix",
+          html_url: null,
+          homepage: "https://nextflix-br1.vercel.app/",
+          description: "Un clon fullstack funcional de Netflix, usando su propia base de datos para peliculas y usuarios.",
+          img: "https://i.imgur.com/0cG22c7.png",
+          topics: ["React.js", "Next.js", "JWT", "MongoDB"],
+        };
+      break;
+      case 'en':
+        //add private projects cards
+        privateProject = 
+        {
+          name: "NextFlix",
+          html_url: null,
+          homepage: "https://nextflix-br1.vercel.app/",
+          description: "A functional fullstack clone of Netflix, that uses its own database for movies and users.",
+          img: "https://i.imgur.com/0cG22c7.png",
+          topics: ["React.js", "Next.js", "JWT", "MongoDB"],
+        };
+      break;
+    
+      default:
+        //add private projects cards
+        privateProject = 
+        {
+          name: "NextFlix",
+          html_url: null,
+          homepage: "https://nextflix-br1.vercel.app/",
+          description: "Un clon fullstack funcional de Netflix, usando su propia base de datos para peliculas y usuarios.",
+          img: "https://i.imgur.com/0cG22c7.png",
+          topics: ["React.js", "Next.js", "JWT", "MongoDB"],
+        };
+      break;
+    }
 
     this.projects.push(privateProject);
 
@@ -130,14 +173,13 @@ export class ProjectsComponent implements OnInit {
 
         // Set proper description
         if ((project.description).includes("[PROJECT") && (project.description).includes("{")) {
-          let desiredLang= "es";
 
-          switch (desiredLang) {
+          switch (this.desiredLang) {
             case "en":
               let indexStartDescriptionEnglish = project.description.indexOf("{ENGLISH:");
               let indexEndDescriptionEnglish = project.description.indexOf("}");
 
-              this.projects[this.projects.length - 1].description = project.description.substring(indexStartDescriptionEnglish + 11, indexEndDescriptionEnglish);
+              this.projects[this.projects.length - 1].description = project.description.substring(indexStartDescriptionEnglish + 10, indexEndDescriptionEnglish);
             break;
           
             case "es":

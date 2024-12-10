@@ -7,7 +7,7 @@ import { Education } from '../../interfaces/education.interface';
   providedIn: 'root'
 })
 export class EducationService {
-
+  
   private url = 'data/educations.json';
 
   constructor(@Inject(HttpClient) private http: HttpClient) {}

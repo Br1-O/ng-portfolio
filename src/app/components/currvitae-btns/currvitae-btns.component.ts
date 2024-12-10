@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-currvitae-btns',
   standalone: true,
-  imports: [ButtonComponent, ],
+  imports: [ButtonComponent, TranslateModule],
   templateUrl: './currvitae-btns.component.html',
   styleUrl: './currvitae-btns.component.css'
 })

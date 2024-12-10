@@ -1,6 +1,7 @@
 {
   "NAVBAR":
   {
+    "ALT-IMG-LOGO": "Logo de la pagina con la letra B y la letra O",
     "ITEM-1": "Proyectos",
     "ITEM-2": "Educación",
     "ITEM-3": "Sobre mí",
@@ -8,12 +9,25 @@
   },
   "INTRODUCTION": 
   {
+    "ALT-IMG-LOGO": "Logo animado de la pagina, ocupando la pantalla completa para luego desaparecer en el centro",
     "TITLE": "¡Hola, soy Bruno Ortuño!",
-    "SUBTITLE": "Desarrollador Web Fullstack"
+    "SUBTITLE": "Desarrollador Web Fullstack",
+    "GO-TO-NEXT-SECTION": "Ir a Proyectos"
+  },
+  "BTNS-INFO":
+  {
+    "SEE-RESUME": "Ver curriculum",
+    "SEE-LINKEDIN": "Ver LinkedIn"
   },
   "PROJECTS":
   {
-    "TITLE": "Mis Proyectos"
+    "TITLE": "Mis Proyectos",
+    "ALT-IMG-PROJECT": "Vista previa del proyecto ",
+    "TITLE-ICON-COMPUTER": "Ver sitio web",
+    "TITLE-ICON-GITHUB": "Ver repositorio",
+    "ALT-ICON-COMPUTER": "Icono de computadora",
+    "ALT-ICON-GITHUB": "Icono de Github",
+    "GO-TO-NEXT-SECTION": "Ir a Educación"
   },
   "EDUCATION":
   {
@@ -141,11 +155,18 @@
         "img": null,
         "subjects": [" Ruby", " Javascript", " Pensamiento computacional"]
       }
-    ]
+    ],
+
+    "SKILLS": "Habilidades",
+    "GO-TO-NEXT-SECTION": "Ir a Sobre mí"
   },
-  "ABOUT_ME": 
+  "ABOUT-ME": 
   {
     "TITLE": "Sobre mí",
+
+    "ALT-IMG-PROFILE": "Foto de perfil con estilo dibujado",
+
+    "ALT-IMG-HOBBIES": "Foto de un peón de ajedrez negro con sombras blancas sobre fondo negro",
 
     "P-1-1": "Soy un desarrollador fullstack apasionado por el diseño y la implementación de soluciones de software escalables y eficientes. Mi experiencia abarca lenguajes como",
     "P-1-SPAN": "Java, C++, Python, JavaScript, PHP y SQL",
@@ -161,36 +182,46 @@
 
     "P-4-1": "Disfruto de aprender cosas nuevas, entre ellas nuevos",
     "P-4-SPAN": "idiomas",
-    "P-4-2": "ya que estos me permiten ver peliculas y series sin sufrir de la perdida de significado que se produce en las traducciones."
+    "P-4-2": "ya que estos me permiten ver peliculas y series sin sufrir de la perdida de significado que se produce en las traducciones.",
+
+    "GO-TO-NEXT-SECTION": "Ir a Contacto"
   },
   "FOOTER":
   {
-    "TITLE": "¡Hola, soy Bruno Ortuño!",
+    "TITLE": "¡Hagamos sus ideas realidad!",
     "P-1": "Estoy a su disposición para llevar sus ideas a la práctica de la mejor forma posible.",
-    "P-2": "Sientase libre de contactarme por alguna de las siguientes vias:"
+    "P-2": "Sientase libre de contactarme por alguna de las siguientes vias:",
+    "TITLE-ICON-LINKEDIN": "Ver LinkedIn",
+    "TITLE-ICON-EMAIL": "Enviar correo electrónico",
+    "TITLE-ICON-WHATSAPP": "Enviar mensaje por Whatsapp",
+    "TITLE-ICON-GITHUB": "Ir al perfil de Github",
+    "ALT-ICON-LINKEDIN": "Icono de LinkedIn",
+    "ALT-ICON-EMAIL": "Icono de correo electrónico",
+    "ALT-ICON-WHATSAPP": "Icono de Whatsapp",
+    "ALT-ICON-GITHUB": "Icono de Github"
   },
   "CONTACT-FORM":
   {
-    "LABEL-NAME": "Nombre completo",
-    "LABEL-NAME-PLACEHOLDER": "Ingrese su nombre",
-    "LABEL-NAME-ERR1": "El nombre es obligatorio.",
-    "LABEL-NAME-ERR2": "Debe tener al menos 3 caracteres.",
+    "NAME-LABEL": "Nombre completo",
+    "NAME-PLACEHOLDER": "Ingrese su nombre",
+    "NAME-ERR1": "El nombre es obligatorio.",
+    "NAME-ERR2": "Debe tener al menos 3 caracteres.",
 
-    "LABEL-EMAIL": "Correo electrónico",
-    "LABEL-EMAIL-PLACEHOLDER": "Ingrese su email",
-    "LABEL-EMAIL-ERR1": "El correo es obligatorio.",
-    "LABEL-EMAIL-ERR2": "El correo no es válido.",
+    "EMAIL-LABEL": "Correo electrónico",
+    "EMAIL-PLACEHOLDER": "Ingrese su email",
+    "EMAIL-ERR1": "El correo es obligatorio.",
+    "EMAIL-ERR2": "El correo no es válido.",
 
-    "LABEL-SUBJECT": "Asunto",
-    "LABEL-SUBJECT-PLACEHOLDER": "Ingrese el motivo",
-    "LABEL-SUBJECT-ERR1": "El asunto es obligatorio.",
-    "LABEL-SUBJECT-ERR2": "Debe tener al menos 3 caracteres.",
+    "SUBJECT-LABEL": "Asunto",
+    "SUBJECT-PLACEHOLDER": "Ingrese el motivo",
+    "SUBJECT-ERR1": "El asunto es obligatorio.",
+    "SUBJECT-ERR2": "Debe tener al menos 3 caracteres.",
 
-    "LABEL-MESSAGE": "Consulta",
-    "LABEL-MESSAGE-PLACEHOLDER": "Ingrese su consulta",
-    "LABEL-MESSAGE-ERR1": "La consulta es obligatoria.",
-    "LABEL-MESSAGE-ERR2": "Debe tener al menos 10 caracteres.",
+    "MESSAGE-LABEL": "Consulta",
+    "MESSAGE-PLACEHOLDER": "Ingrese su consulta",
+    "MESSAGE-ERR1": "La consulta es obligatoria.",
+    "MESSAGE-ERR2": "Debe tener al menos 10 caracteres.",
 
-    "BTN-TEXT": "Enviar Mensaje"
+    "BTN-SUBMIT": "Enviar Mensaje"
   }    
 }

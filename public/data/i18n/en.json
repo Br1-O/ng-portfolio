@@ -1,16 +1,30 @@
 {
     "NAVBAR": {
+      "ALT-IMG-LOGO": "Page logo portraying the letter B and the letter O",
       "ITEM-1": "Projects",
       "ITEM-2": "Education",
       "ITEM-3": "About Me",
       "ITEM-4": "Contact"
     },
     "INTRODUCTION": {
+      "ALT-IMG-LOGO": "Animated page logo, it occupies all the screen and then starts shrinking in the center until it fully disappears",
       "TITLE": "Hi, I'm Bruno Ortuño!",
-      "SUBTITLE": "Fullstack Web Developer"
+      "SUBTITLE": "Fullstack Web Developer",
+      "GO-TO-NEXT-SECTION": "Go to Projects"
+    },
+    "BTNS-INFO":
+    {
+      "SEE-RESUME": "See resume",
+      "SEE-LINKEDIN": "See LinkedIn"
     },
     "PROJECTS": {
-      "TITLE": "My Projects"
+      "TITLE": "My Projects",
+      "ALT-IMG-PROJECT": "Preview image of the project ",
+      "TITLE-ICON-COMPUTER": "See website",
+      "TITLE-ICON-GITHUB": "See repository",
+      "ALT-ICON-COMPUTER": "Computer icon",
+      "ALT-ICON-GITHUB": "Github icon",
+      "GO-TO-NEXT-SECTION": "Go to Education"
     },
     "EDUCATION": {
       "TITLE": "Education",
@@ -136,10 +150,17 @@
           "img": null,
           "subjects": [" Ruby", " JavaScript", " Computational Thinking"]
         }
-      ]
+      ],
+
+      "SKILLS": "Skills",
+      "GO-TO-NEXT-SECTION": "Go to About me"
     },
-    "ABOUT_ME": {
+    "ABOUT-ME": {
       "TITLE": "About Me",
+
+      "ALT-IMG-PROFILE": "Profile picture with animated style",
+
+      "ALT-IMG-HOBBIES": "Picture of a black chess pawn with white shadows over a black background",
   
       "P-1-1": "I am a fullstack developer passionate about designing and implementing scalable and efficient software solutions. My experience spans languages such as",
       "P-1-SPAN": "Java, C++, Python, JavaScript, PHP, and SQL",
@@ -155,33 +176,43 @@
   
       "P-4-1": "I enjoy learning new things, including new",
       "P-4-SPAN": "languages",
-      "P-4-2": "as they allow me to watch movies and series without suffering the loss of meaning that occurs in translations."
+      "P-4-2": "as they allow me to watch movies and series without suffering the loss of meaning that occurs in translations.",
+
+      "GO-TO-NEXT-SECTION": "Go to Contact"
     },
     "FOOTER": {
-      "TITLE": "Hi, I'm Bruno Ortuño!",
+      "TITLE": "Let's turn your ideas into reality!",
       "P-1": "I am available to bring your ideas to life in the best possible way.",
-      "P-2": "Feel free to contact me through any of the following methods:"
+      "P-2": "Feel free to contact me through any of the following methods:",
+      "TITLE-ICON-LINKEDIN": "See LinkedIn profile",
+      "TITLE-ICON-EMAIL": "Send email",
+      "TITLE-ICON-WHATSAPP": "Send Whatsapp message",
+      "TITLE-ICON-GITHUB": "See Github profile",
+      "ALT-ICON-LINKEDIN": "LinkedIn icon",
+      "ALT-ICON-EMAIL": "Email icon",
+      "ALT-ICON-WHATSAPP": "Whatsapp icon",
+      "ALT-ICON-GITHUB": "Github icon"
     },
     "CONTACT-FORM": {
-      "LABEL-NAME": "Full Name",
-      "LABEL-NAME-PLACEHOLDER": "Enter your name",
-      "LABEL-NAME-ERR1": "Name is required.",
-      "LABEL-NAME-ERR2": "It must have at least 3 characters.",
+      "NAME-LABEL": "Full Name",
+      "NAME-PLACEHOLDER": "Enter your name",
+      "NAME-ERR1": "Name is required.",
+      "NAME-ERR2": "It must have at least 3 characters.",
   
-      "LABEL-EMAIL": "Email",
-      "LABEL-EMAIL-PLACEHOLDER": "Enter your email",
-      "LABEL-EMAIL-ERR1": "Email is required.",
-      "LABEL-EMAIL-ERR2": "The email is not valid.",
+      "EMAIL-LABEL": "Email",
+      "EMAIL-PLACEHOLDER": "Enter your email",
+      "EMAIL-ERR1": "Email is required.",
+      "EMAIL-ERR2": "The email is not valid.",
   
-      "LABEL-SUBJECT": "Subject",
-      "LABEL-SUBJECT-PLACEHOLDER": "Enter the subject",
-      "LABEL-SUBJECT-ERR1": "Subject is required.",
-      "LABEL-SUBJECT-ERR2": "It must have at least 3 characters.",
+      "SUBJECT-LABEL": "Subject",
+      "SUBJECT-PLACEHOLDER": "Enter the subject",
+      "SUBJECT-ERR1": "Subject is required.",
+      "SUBJECT-ERR2": "It must have at least 3 characters.",
   
-      "LABEL-MESSAGE": "Message",
-      "LABEL-MESSAGE-PLACEHOLDER": "Enter your message",
-      "LABEL-MESSAGE-ERR1": "Message is required.",
-      "LABEL-MESSAGE-ERR2": "It must have at least 15 characters.",
+      "MESSAGE-LABEL": "Message",
+      "MESSAGE-PLACEHOLDER": "Enter your message",
+      "MESSAGE-ERR1": "Message is required.",
+      "MESSAGE-ERR2": "It must have at least 15 characters.",
   
       "BTN-SUBMIT": "Send Message"
     }

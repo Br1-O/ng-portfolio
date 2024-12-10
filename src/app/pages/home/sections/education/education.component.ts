@@ -4,10 +4,11 @@ import { ButtonArrowComponent } from '../../../../components/button-arrow/button
 import { EducationCardComponent } from '../../../../components/education-card/education-card.component';
 import { EducationService } from '../../../../services/education/education.service';
 import { Education } from '../../../../interfaces/education.interface';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-education',
-  imports: [CommonModule, ButtonArrowComponent, EducationCardComponent],
+  imports: [CommonModule, ButtonArrowComponent, EducationCardComponent, TranslateModule],
   standalone: true,
   templateUrl: './education.component.html',
   styleUrl: './education.component.css'
@@ -57,28 +58,17 @@ export class EducationComponent implements OnInit{
     }
   }
 
-  //injects
   educations: Education[] = [];
 
-  educationService: EducationService;
+  constructor(private translate: TranslateService) {}
 
-  constructor(@Inject(EducationService) educationService: EducationService) {
-    this.educationService = educationService;
+  ngOnInit(): void {
+    this.loadEducationData();
   }
 
-  //on init
-  ngOnInit(): void {
-    // Fetch education data
-    this.educationService.getEducation().subscribe(
-      {
-        next: (educations: Education[]) =>
-        {
-          this.educations = educations;
-        },
-        error: (err: Error) => {
-          console.log(err);
-        }
-      }
-    );
+  loadEducationData(): void {
+    this.translate.get('EDUCATION.EDUCATIONS').subscribe((educations) => {
+      this.educations = educations;
+    });
   }
 }

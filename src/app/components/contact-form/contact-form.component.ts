@@ -5,11 +5,12 @@ import { Message } from '../../interfaces/message.interface';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FormPostService } from '../../services/form/form-post.service';
 import Swal from 'sweetalert2';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [ButtonComponent, FormsModule, ReactiveFormsModule, CommonModule],
+  imports: [ButtonComponent, FormsModule, ReactiveFormsModule, CommonModule, TranslateModule],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.css'],
 })

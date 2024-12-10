@@ -1,12 +1,12 @@
 <section id="education" class="bg-glass" [class.visible]="isVisible">
     <h2 class="subtitle">
         <i class='bx bx-book-alt' ></i>
-        <span>Educación </span>
+        <span>{{ 'EDUCATION.TITLE' | translate }}</span>
     </h2>
 
     <div *ngIf="educations.length > 0" id="education-wrapper">
         <app-education-card [education] = "education" *ngFor="let education of educations"></app-education-card>
     </div>
 
-    <app-button-arrow [section]="'#about-me'" [sectionName]="'Sobre mí'"></app-button-arrow>
+    <app-button-arrow [section]="'#about-me'" [sectionName]="'EDUCATION.GO-TO-NEXT-SECTION' | translate"></app-button-arrow>
 </section>
