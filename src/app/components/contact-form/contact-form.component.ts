@@ -1,11 +1,11 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../button/button.component';
 import { Message } from '../../interfaces/message.interface';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FormPostService } from '../../services/form/form-post.service';
 import Swal from 'sweetalert2';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
@@ -14,7 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.css'],
 })
-export class ContactFormComponent {
+export class ContactFormComponent implements OnInit{
 
   postUrl="https://formspree.io/f/xrbgjera"
 
@@ -22,7 +22,10 @@ export class ContactFormComponent {
 
   formPostService: FormPostService;
 
-  constructor(private fb: FormBuilder, @Inject(FormPostService) formPostService: FormPostService) {
+  successMessage: string = "Message sent successfully!";
+  errorMessage: string = "The message couldn't be sent!";
+
+  constructor(private fb: FormBuilder, @Inject(FormPostService) formPostService: FormPostService, private translate: TranslateService) {
     this.form = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       subject: ['', [Validators.required, Validators.minLength(3)]],
@@ -31,6 +34,26 @@ export class ContactFormComponent {
     });
 
     this.formPostService = formPostService;
+  }
+
+  setMessages() : void {
+    this.translate.get('CONTACT-FORM.SUCCESS-MESSAGE').subscribe((successMessage : string) => {
+      this.successMessage = successMessage;
+    });
+
+    this.translate.get('CONTACT-FORM.ERROR-MESSAGE').subscribe((errorMessage : string) => {
+      this.errorMessage = errorMessage;
+    });
+  }
+
+  ngOnInit(): void {
+
+    this.setMessages();
+    
+    // Subscribe to language change
+    this.translate.onLangChange.subscribe(() => {
+      this.setMessages();
+    });
   }
 
   send() {
@@ -48,7 +71,7 @@ export class ContactFormComponent {
                 Swal.fire({
                   position: "bottom-end",
                   icon: "success",
-                  title: "¡Mensaje enviado correctamente!",
+                  title: this.successMessage,
                   showConfirmButton: false,
                   timer: 1500,
                   timerProgressBar: true,
@@ -60,7 +83,7 @@ export class ContactFormComponent {
                 Swal.fire({
                 position: "bottom-end",
                 icon: "error",
-                title: "¡No se pudo enviar el mensaje!",
+                title: this.errorMessage,
                 showConfirmButton: false,
                 timer: 1500,
                 timerProgressBar: true,
@@ -74,7 +97,7 @@ export class ContactFormComponent {
         Swal.fire({
           position: "bottom-end",
           icon: "error",
-          title: "¡No se pudo enviar el mensaje!",
+          title: this.errorMessage,
           showConfirmButton: false,
           timer: 1500,
           timerProgressBar: true,

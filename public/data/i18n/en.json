@@ -10,6 +10,8 @@
       "ALT-IMG-LOGO": "Animated page logo, it occupies all the screen and then starts shrinking in the center until it fully disappears",
       "TITLE": "Hi, I'm Bruno Ortuño!",
       "SUBTITLE": "Fullstack Web Developer",
+      "LINK-RESUME": "documents/Resume fullstack - Bruno Ortuno.pdf",
+      "LINK-LINKEDIN": "https://www.linkedin.com/in/bortuno/?locale=en_US",
       "GO-TO-NEXT-SECTION": "Go to Projects"
     },
     "BTNS-INFO":
