@@ -18,7 +18,7 @@ import { TranslateConfigModule } from '../translate-config.module';
     FooterComponent,
     HttpClientModule,
     TranslateModule,
-    TranslateConfigModule, // Import the custom translate config module
+    TranslateConfigModule // Import the custom translate config module
   ],
   providers: [ ProjectsService],
   templateUrl: './app.component.html',
