@@ -2,6 +2,7 @@
   "NAVBAR":
   {
     "ALT-IMG-LOGO": "Logo de la pagina con la letra B y la letra O",
+    "ITEM-0": "Habilidades",
     "ITEM-1": "Proyectos",
     "ITEM-2": "Educación",
     "ITEM-3": "Sobre mí",
@@ -14,12 +15,26 @@
     "SUBTITLE": "Desarrollador Web Fullstack",
     "LINK-RESUME": "documents/bruno-ortuno-developer-CV.pdf",
     "LINK-LINKEDIN": "https://www.linkedin.com/in/bortuno",
-    "GO-TO-NEXT-SECTION": "Ir a Proyectos"
+    "GO-TO-NEXT-SECTION": "Ir a Habilidades"
   },
   "BTNS-INFO":
   {
     "SEE-RESUME": "Ver curriculum",
     "SEE-LINKEDIN": "Ver LinkedIn"
+  },
+  "SKILLS":
+  {
+    "TITLE": "Mis Habilidades",
+    "SUBTITLE-1": "Habilidades blandas",
+    "ITEM-SOFT-SKILLS-1": "Código Limpio",
+    "ITEM-SOFT-SKILLS-2": "Trabajo en equipo",
+    "ITEM-SOFT-SKILLS-3": "Comunicación asertiva",
+    "ITEM-SOFT-SKILLS-4": "Atención a detalle | Prolijidad",
+    "ITEM-SOFT-SKILLS-5": "Pensamiento lógico | analítico",
+    "SUBTITLE-2": "Idiomas",
+    "ITEM-TONGUE-1": "Inglés · Nivel: C2",
+    "ITEM-TONGUE-2": "Japonés · Nivel: N6",
+    "GO-TO-NEXT-SECTION": "Ir a Proyectos"
   },
   "PROJECTS":
   {

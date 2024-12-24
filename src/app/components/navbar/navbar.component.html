@@ -9,6 +9,11 @@
 
     <ul id="navbar-menu" [class.active]="isMenuActive">
         <li class="nav-item">  
+            <a href="#skills" (click)="toggleMenu()">
+                {{'NAVBAR.ITEM-0' | translate}}
+            </a>
+        </li>
+        <li class="nav-item">  
             <a href="#projects" (click)="toggleMenu()">
                 {{'NAVBAR.ITEM-1' | translate}}
             </a>

@@ -1,0 +1,76 @@
+<section id="skills" class="bg-glass" appScrollSpy= ".nav-item:nth-of-type(1) a">
+
+        <h2 class="subtitle">
+            <i class='bx bx-wrench'></i>
+            <span>
+                {{ 'SKILLS.TITLE' | translate }}
+            </span>
+        </h2>
+
+        <div id="skills-container">
+            <article id="soft-skills">
+                <h3>
+                    {{ 'SKILLS.SUBTITLE-1' | translate }}
+                </h3>
+        
+                <div class="soft-skills-container">
+                    <ul>
+                        <li> {{ 'SKILLS.ITEM-SOFT-SKILLS-1' | translate }} </li>
+                        <li> {{ 'SKILLS.ITEM-SOFT-SKILLS-2' | translate }} </li>
+                        <li> {{ 'SKILLS.ITEM-SOFT-SKILLS-3' | translate }} </li>
+                        <li> {{ 'SKILLS.ITEM-SOFT-SKILLS-4' | translate }} </li>
+                        <li> {{ 'SKILLS.ITEM-SOFT-SKILLS-5' | translate }} </li>
+                    </ul>
+                </div>
+
+                <h3>
+                    {{ 'SKILLS.SUBTITLE-2' | translate }}
+                </h3>
+
+                <div class="soft-skills-container">
+                    <ul>
+                        <li>{{ 'SKILLS.ITEM-TONGUE-1' | translate }}</li>
+                        <li>{{ 'SKILLS.ITEM-TONGUE-2' | translate }}</li>
+                    </ul>
+                </div>
+
+            </article>
+
+            <article id="languages">
+                <div id="categories">
+                    <h3 (click)="changeLanguagesContent($event)" [class.active]="currentActiveSection === 'Backend'">
+                        Backend
+                    </h3>
+                    <h3 (click)="changeLanguagesContent($event)" [class.active]="currentActiveSection === 'Frontend'">
+                        Frontend
+                    </h3>
+                    <h3 (click)="changeLanguagesContent($event)" [class.active]="currentActiveSection === 'General'">
+                        General
+                    </h3>
+                </div>
+        
+                <div class="image-container active" [class.active]="currentActiveSection === 'Frontend'">
+                    <span *ngFor="let skill of skillsFrontend">
+                        <svg [attr.alt]="skill.alt" [innerHTML]="sanitizeSvg(skill.icon)" loading="lazy"></svg>
+                        <p>{{ skill.name }}</p>
+                    </span>
+                </div>
+
+                <div class="image-container" [class.active]="currentActiveSection === 'Backend'">
+                    <span *ngFor="let skill of skillsBackend">
+                        <svg [attr.alt]="skill.alt" [innerHTML]="sanitizeSvg(skill.icon)" loading="lazy"></svg>
+                        <p>{{ skill.name }}</p>
+                    </span>
+                </div>
+                
+                <div class="image-container" [class.active]="currentActiveSection === 'General'">
+                    <span *ngFor="let skill of skillsGeneral">
+                        <svg [attr.alt]="skill.alt" [innerHTML]="sanitizeSvg(skill.icon)" loading="lazy"></svg>
+                        <p>{{ skill.name }}</p>
+                    </span>
+                </div>
+            </article>
+        </div>
+    
+        <app-button-arrow [section]="'#projects'" [sectionName]="'SKILLS.GO-TO-NEXT-SECTION' | translate"></app-button-arrow>
+</section>

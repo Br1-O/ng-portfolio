@@ -42,7 +42,7 @@ i{
     color: var(--font-color);
 }
 
-i:hover{
+.animated{
     color: var(--font-hover-color);
     animation: RotateY 1s ease-in-out forwards;
 }

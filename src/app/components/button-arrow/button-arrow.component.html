@@ -1,5 +1,10 @@
 <div class="btn-arrow-container bg-glass">
     <a href={{section}} title="{{sectionName}}">    
-        <i class='bx bx-down-arrow-alt' ></i>
+        <i [class.bx]="true" 
+        [class.bx-down-arrow-alt]="arrowDirection === 'down'"
+        [class.bx-up-arrow-alt]="arrowDirection === 'up'"
+        [class.bx-left-arrow-alt]="arrowDirection === 'left'"
+        [class.bx-right-arrow-alt]="arrowDirection === 'right'">
+        </i>     
     </a>
 </div>

@@ -6,6 +6,7 @@ export const routes: Routes =
     {path: "", component: HomeComponent},
     {path: "", loadComponent: () => import("./pages/home/sections/introduction/introduction.component").then((m=> m.IntroductionComponent))},
     {path: "about-me", loadComponent: () => import("./pages/home/sections/about-me/about-me.component").then((m=> m.AboutMeComponent))},
+    {path: "skills", loadComponent: () => import("./pages/home/sections/skills/skills.component").then((m=> m.SkillsComponent))},
     {path: "education", loadComponent: () => import("./pages/home/sections/education/education.component").then((m=> m.EducationComponent))},
     {path: "projects", loadComponent: () => import("./pages/home/sections/projects/projects.component").then((m=> m.ProjectsComponent))},
     {path: "**", redirectTo: ""} //not found redirect

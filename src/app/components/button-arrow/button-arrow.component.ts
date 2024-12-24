@@ -9,5 +9,6 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonArrowComponent {
   @Input() section:string = "#";
-  @Input() sectionName:string = "Inicio";
+  @Input() sectionName:string = "#";
+  @Input() arrowDirection:string = "down";
 }

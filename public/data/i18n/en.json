@@ -1,6 +1,7 @@
 {
     "NAVBAR": {
       "ALT-IMG-LOGO": "Page logo portraying the letter B and the letter O",
+      "ITEM-0": "Skills",
       "ITEM-1": "Projects",
       "ITEM-2": "Education",
       "ITEM-3": "About Me",
@@ -12,12 +13,26 @@
       "SUBTITLE": "Fullstack Web Developer",
       "LINK-RESUME": "documents/Resume fullstack - Bruno Ortuno.pdf",
       "LINK-LINKEDIN": "https://www.linkedin.com/in/bortuno/?locale=en_US",
-      "GO-TO-NEXT-SECTION": "Go to Projects"
+      "GO-TO-NEXT-SECTION": "Go to Skills"
     },
     "BTNS-INFO":
     {
       "SEE-RESUME": "See resume",
       "SEE-LINKEDIN": "See LinkedIn"
+    },
+    "SKILLS":
+    {
+      "TITLE": "My Skills",
+      "SUBTITLE-1": "Soft Skills",
+      "ITEM-SOFT-SKILLS-1": "Clean Code",
+      "ITEM-SOFT-SKILLS-2": "Teamwork",
+      "ITEM-SOFT-SKILLS-3": "Assertive communication",
+      "ITEM-SOFT-SKILLS-4": "Detail oriented | Meticulous",
+      "ITEM-SOFT-SKILLS-5": "Logical | Analytical Thinking",
+      "SUBTITLE-2": "Languages",
+      "ITEM-TONGUE-1": "English · Level: C2",
+      "ITEM-TONGUE-2": "Japanese · Level: N6",
+      "GO-TO-NEXT-SECTION": "Go to Projects"
     },
     "PROJECTS": {
       "TITLE": "My Projects",

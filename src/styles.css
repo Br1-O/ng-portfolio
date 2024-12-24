@@ -2217,6 +2217,163 @@ body::before {
     }
 }
 
+/* bring element on Y axis from upwards*/
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    2% {
+      transform: translateY(-98%);
+    }
+    4% {
+      transform: translateY(-96%);
+    }
+    6% {
+      transform: translateY(-94%);
+    }
+    8% {
+      transform: translateY(-92%);
+    }
+    10% {
+      transform: translateY(-90%);
+    }
+    12% {
+      transform: translateY(-88%);
+    }
+    14% {
+      transform: translateY(-86%);
+    }
+    16% {
+      transform: translateY(-84%);
+    }
+    18% {
+      transform: translateY(-82%);
+    }
+    20% {
+      transform: translateY(-80%);
+    }
+    22% {
+      transform: translateY(-78%);
+    }
+    24% {
+      transform: translateY(-76%);
+    }
+    26% {
+      transform: translateY(-74%);
+    }
+    28% {
+      transform: translateY(-72%);
+    }
+    30% {
+      transform: translateY(-70%);
+    }
+    32% {
+      transform: translateY(-68%);
+    }
+    34% {
+      transform: translateY(-66%);
+    }
+    36% {
+      transform: translateY(-64%);
+    }
+    38% {
+      transform: translateY(-62%);
+    }
+    40% {
+      transform: translateY(-60%);
+    }
+    42% {
+      transform: translateY(-58%);
+    }
+    44% {
+      transform: translateY(-56%);
+    }
+    46% {
+      transform: translateY(-54%);
+    }
+    48% {
+      transform: translateY(-52%);
+    }
+    50% {
+      transform: translateY(-50%);
+    }
+    52% {
+      transform: translateY(-48%);
+    }
+    54% {
+      transform: translateY(-46%);
+    }
+    56% {
+      transform: translateY(-44%);
+    }
+    58% {
+      transform: translateY(-42%);
+    }
+    60% {
+      transform: translateY(-40%);
+    }
+    62% {
+      transform: translateY(-38%);
+    }
+    64% {
+      transform: translateY(-36%);
+    }
+    66% {
+      transform: translateY(-34%);
+    }
+    68% {
+      transform: translateY(-32%);
+    }
+    70% {
+      transform: translateY(-30%);
+    }
+    72% {
+      transform: translateY(-28%);
+    }
+    74% {
+      transform: translateY(-26%);
+    }
+    76% {
+      transform: translateY(-24%);
+    }
+    78% {
+      transform: translateY(-22%);
+    }
+    80% {
+      transform: translateY(-20%);
+    }
+    82% {
+      transform: translateY(-18%);
+    }
+    84% {
+      transform: translateY(-16%);
+    }
+    86% {
+      transform: translateY(-14%);
+    }
+    88% {
+      transform: translateY(-12%);
+    }
+    90% {
+      transform: translateY(-10%);
+    }
+    92% {
+      transform: translateY(-8%);
+    }
+    94% {
+      transform: translateY(-6%);
+    }
+    96% {
+      transform: translateY(-4%);
+    }
+    98% {
+      transform: translateY(-2%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+}
+
 /* bounce downwards In element*/
 @keyframes bounceDown {
     0% {
@@ -2233,6 +2390,26 @@ body::before {
     }
     100% {
         transform: translateY(0%);
+    }
+}
+
+@keyframes scaleAndTranslate {
+    0% {
+      transform: translateY(-50%) scale(0);
+    }
+    100% {
+      transform: translateY(0%) scale(1);
+    }
+}
+
+@keyframes scaleFromLeftTop{
+    0%{
+        transform:scale(0.25);
+        transform-origin:left top;
+    }
+    100%{
+        transform:scale(1);
+        transform-origin:left top;
     }
 }
   
@@ -2564,6 +2741,7 @@ input::placeholder{
 section, footer{
   position: relative;
   z-index: 2;
+  user-select: none;
 }
 
 body section:hover{

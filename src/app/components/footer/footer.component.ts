@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -9,7 +9,24 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit{
+
+  ngOnInit(): void {
+    const tagGroup = Array.from(document.querySelectorAll('i'));
+
+    for (const tag of tagGroup) {
+      
+      tag.addEventListener('mouseenter', () => {
+        if (!tag.classList.contains('animated')) {
+          tag.classList.add('animated');
+          tag.addEventListener('animationend', () => {
+            tag.classList.remove('animated'); // Remove class when animation ends
+          }, { once: true });
+        }
+      });
+    }
+  }
+
   //animation
   isVisible = false;
   @HostListener('window:scroll', [])
@@ -29,8 +46,8 @@ export class FooterComponent {
 
       const isElementInView = topInView2 || bottomInView;
 
-      const navbarItem: HTMLAnchorElement | null = document.querySelector(".nav-item:nth-of-type(4) a");
-      const prevNavbarItem: HTMLAnchorElement | null = document.querySelector(".nav-item:nth-of-type(3) a");
+      const navbarItem: HTMLAnchorElement | null = document.querySelector(".nav-item:nth-of-type(5) a");
+      const prevNavbarItem: HTMLAnchorElement | null = document.querySelector(".nav-item:nth-of-type(4) a");
 
 
       if (navbarItem && prevNavbarItem) {

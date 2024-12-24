@@ -42,7 +42,7 @@ export class AboutMeComponent {
 
       const isEnd = rect.bottom <= window.innerHeight * 0.9;
 
-      const navbarItem: HTMLAnchorElement | null = document.querySelector(".nav-item:nth-of-type(3) a");
+      const navbarItem: HTMLAnchorElement | null = document.querySelector(".nav-item:nth-of-type(4) a");
 
       if (navbarItem) {
         if (isElementInView) {
