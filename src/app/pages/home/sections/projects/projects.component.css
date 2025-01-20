@@ -56,7 +56,7 @@
 }
 
 #pagination-container span{
-    background-color:#0005;
+    background-color:var(--main-color);
 }
 
 #pagination-container i{
@@ -71,7 +71,6 @@
 
 #pagination-container i[disabled]{
     pointer-events: none;
-    opacity: 0.5;
 }
 
 @media (min-width: 446px){
