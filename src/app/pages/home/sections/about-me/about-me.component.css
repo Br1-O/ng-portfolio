@@ -69,14 +69,8 @@
     }
 
     .image-container{
-        border: 1px solid var(--font-hover-color);
-        border-radius: 10px;
         padding: 0.5rem;
-    
-        background: linear-gradient(135deg, #fffffff5, var(--secondary-color), #ffffff98);
-    
         transform: rotate(5deg);
-
         order: 2;
     }
     
@@ -136,14 +130,8 @@
 }
 
 .image-container{
-    border: 1px solid var(--font-hover-color);
-    border-radius: 10px;
     padding: 0.5rem;
-
-    background: linear-gradient(135deg, #fffffff5, var(--secondary-color), #ffffff98);
-
     transform: rotate(5deg);
-
     order: 1;
 }
 
@@ -162,6 +150,24 @@
 }
 
 .profile-img{
-    border-radius: 10px;
     max-width: 10rem;
+
+    mask-image: url('/images/maskimage.webp');
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url('/images/maskimage.webp'); /* For Safari support */
+    -webkit-mask-size: cover; /* For Safari */
+    -webkit-mask-repeat: no-repeat; /* For Safari */
+}
+
+.profile-img-2{
+    max-width: 10rem;
+
+    mask-image: url('/images/maskimage.webp');
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url('/images/maskimage.webp'); /* For Safari support */
+    -webkit-mask-size: cover; /* For Safari */
+    -webkit-mask-repeat: no-repeat; /* For Safari */
+    transform: scaleX(-1);
 }
