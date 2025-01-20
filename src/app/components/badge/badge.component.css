@@ -1,14 +1,17 @@
 p{
-    padding: 0.3rem 0.55rem;
-    border: 1px solid var(--main-color);
-    border-radius: 15px;
-    background-color: var(--secondary-color);
+    padding: 0.35rem 1rem;
+    background-color: var(--main-color);
+    text-align: center;
+    max-width: max-content;
 
     color: var(--font-hover-color);
     letter-spacing: 1px;
     cursor: none;
+    white-space: nowrap;
+    border: 1px solid var(--font-hover-color);
+    border-radius: 15px 0px;
 }
 
 p:hover{
-    filter: brightness(1.10);
+    filter: brightness(1.05);
 }

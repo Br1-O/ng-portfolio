@@ -1,13 +1,21 @@
-<section id="projects" class="bg-glass"  appScrollSpy=".nav-item:nth-of-type(2) a">
+<section id="projects" class="bg-glass"  #focusableElement tabindex="0"  appScrollSpy=".nav-item:nth-of-type(2) a" (keydown) = "onKeyDown($event)" (mouseenter)="onMouseEnter()">
 
     <div id="projects-wrapper">
         <h2 class="subtitle">
             <i class='bx bx-folder' ></i>
             <span>{{ 'PROJECTS.TITLE' | translate }}</span>
         </h2>
+
+        <div id="pagination-container">
+            <i class='bx bxs-chevron-left' id="arrow-previous" (click) = "previousPage()" [attr.disabled] =  "currentPage === 1 ? true : null"></i>
+            <span *ngFor="let page of pages">
+                <app-button [text] = "' ' + page + ' '" [action] = "getAction(page)" [disable] = "page === currentPage"></app-button>
+            </span>
+            <i class='bx bxs-chevron-right' id="arrow-next" (click) = "nextPage()" [attr.disabled] =  "currentPage === maxPages ? true : null"></i>
+        </div>
     
         <div id="projects-container">
-            <article *ngFor="let project of projects">
+            <article *ngFor="let project of getPaginatedProjects">
                 <app-project-card [project] = "project"></app-project-card>
             </article>
         </div>

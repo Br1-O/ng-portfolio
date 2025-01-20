@@ -14,6 +14,7 @@ export class ButtonComponent {
   @Input() action: () => void = () => {}; // Function to execute
   @Output() clicked = new EventEmitter<void>();
   @Input() form: FormGroup = new FormGroup({});
+  @Input() disable: boolean = false;
   
   formPostService: FormPostService;
 

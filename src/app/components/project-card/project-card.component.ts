@@ -10,7 +10,23 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.css'
 })
-export class ProjectCardComponent {
+export class ProjectCardComponent implements OnInit {
   
   @Input() project: any;
+
+  ngOnInit(): void {
+    const tagGroup = Array.from(document.querySelectorAll('i'));
+
+    for (const tag of tagGroup) {
+      
+      tag.addEventListener('mouseenter', () => {
+        if (!tag.classList.contains('animated')) {
+          tag.classList.add('animated');
+          tag.addEventListener('animationend', () => {
+            tag.classList.remove('animated'); // Remove class when animation ends
+          }, { once: true });
+        }
+      });
+    }
+  }
 }

@@ -30,6 +30,10 @@
     margin: 0px auto;
 }
 
+#skills.visible{
+    animation: scrollRevealOpacity 1.5s ease;
+}
+
 h2{
     margin: 0px auto;  
     margin-top: 0.5rem;

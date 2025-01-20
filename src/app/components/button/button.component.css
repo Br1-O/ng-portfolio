@@ -53,3 +53,8 @@
     animation: textColorTransition 0.75s ease-in-out forwards;
 }
 
+.animated-button:disabled {
+    background-color: #8d8d8d;
+    filter: brightness(50%);
+    pointer-events: none;
+}

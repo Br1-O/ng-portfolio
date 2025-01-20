@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { CommonModule} from '@angular/common';
 import { ProjectCardComponent } from '../../../../components/project-card/project-card.component';
 import { ButtonArrowComponent } from '../../../../components/button-arrow/button-arrow.component';
@@ -7,19 +7,26 @@ import { Repository } from '../../../../interfaces/repository.interface';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateConfigModule } from '../../../../translate-config.module';
 import { ScrollSpyDirective } from '../../../../directives/scroll-spy.directive';
+import { ButtonComponent } from '../../../../components/button/button.component';
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule, ProjectCardComponent, ButtonArrowComponent, TranslateModule, ScrollSpyDirective],
+  imports: [CommonModule, ProjectCardComponent, ButtonArrowComponent, TranslateModule, ScrollSpyDirective, ButtonComponent],
   standalone: true,
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent implements OnInit {
+
+  @ViewChild('focusableElement') focusableElement!: ElementRef;
   
   //injects
   user:string = "Br1-O";
   projects: Repository[] = [];
+  pages: number[] = [];
+  currentPage:number = 1;
+  maxItemsPerPage:number = 4;
+  maxPages:number = 1;
 
   constructor(@Inject(ProjectsService) private projectsService: ProjectsService, 
               private translateConfig: TranslateConfigModule, 
@@ -32,6 +39,7 @@ export class ProjectsComponent implements OnInit {
     this.translate.onLangChange.subscribe(() => {
       this.loadProjects(); // Reload project data whenever language changes
     });
+         
   }
 
   loadProjects(): void {
@@ -53,7 +61,15 @@ export class ProjectsComponent implements OnInit {
 
     // Fetch public repositories
     this.projectsService.getProjects(this.user).subscribe({
-      next: (projects: Repository[]) => this.getOnlyPersonalProjects(projects),
+      next: (projects: Repository[]) => {
+        this.getOnlyPersonalProjects(projects);
+      
+        //pagination buttons
+        this.maxPages = (this.projects).length / this.maxItemsPerPage;
+        for (let index = 1; index <= this.maxPages; index++) {
+          this.pages[index-1] = index;
+        }
+      },
       error: (err: Error) => console.log(err)
     });
   }
@@ -83,6 +99,52 @@ export class ProjectsComponent implements OnInit {
         this.formatProject(project, indexKeyWord);
       }
     });
+  }
+
+  //use of get keyword to make the function behave like a getter method
+  get getPaginatedProjects() {
+    let startIndex = (this.currentPage - 1) * this.maxItemsPerPage;
+    let lastIndex = startIndex + this.maxItemsPerPage;
+
+    return this.projects.slice(startIndex, lastIndex)
+  }
+
+  changePage(newPage: number) {
+    if (newPage >= 1 && newPage <= this.maxPages) {
+      this.currentPage = newPage;
+    }
+  }
+  
+  previousPage() {
+    let newPage = this.currentPage - 1;
+    if (newPage >= 1 && newPage <= this.maxPages) {
+      this.currentPage = newPage;
+    }
+  }
+
+  nextPage() {
+    let newPage = this.currentPage + 1;
+    if (newPage >= 1 && newPage <= this.maxPages) {
+      this.currentPage = newPage;
+    }
+  }
+    
+  getAction(page: number) {
+    return () => this.changePage(page);
+  }
+
+  onMouseEnter() {
+    // Focus the element when the mouse enters
+    this.focusableElement.nativeElement.focus();
+  }
+  
+
+  onKeyDown(event: KeyboardEvent) {
+    if (event.key == "ArrowLeft") {
+      this.previousPage();
+    } else if (event.key == "ArrowRight") {
+      this.nextPage();
+    }
   }
 
   formatProject(project: Repository, indexKeyWord: number): void {
