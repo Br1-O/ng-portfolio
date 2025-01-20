@@ -17,8 +17,6 @@
     overflow: hidden;
 }
 
-
-
 #projects.visible{
     animation: scrollRevealOpacity 1.5s ease;
 }
@@ -71,6 +69,7 @@
 
 #pagination-container i[disabled]{
     pointer-events: none;
+    opacity: 0.5;
 }
 
 @media (min-width: 446px){

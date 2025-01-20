@@ -133,20 +133,6 @@ export class ProjectsComponent implements OnInit {
     return () => this.changePage(page);
   }
 
-  onMouseEnter() {
-    // Focus the element when the mouse enters
-    this.focusableElement.nativeElement.focus();
-  }
-  
-
-  onKeyDown(event: KeyboardEvent) {
-    if (event.key == "ArrowLeft") {
-      this.previousPage();
-    } else if (event.key == "ArrowRight") {
-      this.nextPage();
-    }
-  }
-
   formatProject(project: Repository, indexKeyWord: number): void {
     let formattedName = project.name.replaceAll("-", " ").replaceAll("_", " ");
     formattedName = formattedName.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
