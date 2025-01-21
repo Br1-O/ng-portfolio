@@ -37,6 +37,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 2rem;
+    animation: none;
+}
+
+article.content-changed{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 2rem;
+    animation: flipRight 0.75s ease-in-out forwards;
 }
 
 #pagination-container{

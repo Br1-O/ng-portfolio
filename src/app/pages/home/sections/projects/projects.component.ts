@@ -1,4 +1,4 @@
-import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
+import { Component, Inject, OnInit} from '@angular/core';
 import { CommonModule} from '@angular/common';
 import { ProjectCardComponent } from '../../../../components/project-card/project-card.component';
 import { ButtonArrowComponent } from '../../../../components/button-arrow/button-arrow.component';
@@ -17,8 +17,6 @@ import { ButtonComponent } from '../../../../components/button/button.component'
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent implements OnInit {
-
-  @ViewChild('focusableElement') focusableElement!: ElementRef;
   
   //injects
   user:string = "Br1-O";
@@ -27,6 +25,17 @@ export class ProjectsComponent implements OnInit {
   currentPage:number = 1;
   maxItemsPerPage:number = 4;
   maxPages:number = 1;
+
+  contentChanged = false;
+  counter = 0;
+  
+  changeContent() {
+    this.contentChanged = false; // Add the class
+    setTimeout(() => {
+      this.contentChanged = true; // Remove the class after animation
+    });
+    this.counter++;
+  }
 
   constructor(@Inject(ProjectsService) private projectsService: ProjectsService, 
               private translateConfig: TranslateConfigModule, 
@@ -112,6 +121,7 @@ export class ProjectsComponent implements OnInit {
   changePage(newPage: number) {
     if (newPage >= 1 && newPage <= this.maxPages) {
       this.currentPage = newPage;
+      this.changeContent();
     }
   }
   
@@ -119,6 +129,7 @@ export class ProjectsComponent implements OnInit {
     let newPage = this.currentPage - 1;
     if (newPage >= 1 && newPage <= this.maxPages) {
       this.currentPage = newPage;
+      this.changeContent();
     }
   }
 
@@ -126,6 +137,7 @@ export class ProjectsComponent implements OnInit {
     let newPage = this.currentPage + 1;
     if (newPage >= 1 && newPage <= this.maxPages) {
       this.currentPage = newPage;
+      this.changeContent();
     }
   }
     

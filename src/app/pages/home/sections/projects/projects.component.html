@@ -15,7 +15,7 @@
         </div>
     
         <div id="projects-container">
-            <article *ngFor="let project of getPaginatedProjects">
+            <article *ngFor="let project of getPaginatedProjects" [class.content-changed]="contentChanged">
                 <app-project-card [project] = "project"></app-project-card>
             </article>
         </div>
