@@ -9,6 +9,11 @@ p{
     line-height: 1.5;
 }
 
+label{
+    color: var(--font-hover-color);
+    text-shadow: 1px 1px 5px var(--font-color);
+}
+
 #contact-form{
     display: flex;
     flex-direction: column;
@@ -77,6 +82,11 @@ small{
 
     #contact-form div div input{
         width: 100%;
+    }
+    
+    label{
+        color: var(--font-hover-color);
+        font-size: 1.2rem;
     }
 }
 
