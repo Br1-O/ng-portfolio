@@ -21,16 +21,14 @@ footer{
     margin-bottom: 1rem;
     font-size: 2rem;
     width: fit-content; 
-    color: var(--font-hover-color);
+    color: var(--font-color);
 }
 
 #footer-contact p{
     line-height: 1.5;
-}
-
-#footer-contact p:nth-of-type(2){
     color: var(--font-hover-color);
 }
+
 
 #footer-contact-icons{
     display: flex;
