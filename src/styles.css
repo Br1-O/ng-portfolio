@@ -49,7 +49,8 @@ body::before {
 /* ■■■■­■■­■■­■■­■■ root variables  ■■■■­■■­■■­■■­■■ */
 
 :root{
-  --main-color:#31cbd1 ;
+  --main-color:#31cbd1;
+  --main-color-trans:#31ccd150;
   --secondary-color: #23b3e4;
   --secondary-color-trans: #23b4e450;
   --font-color: #0c252f;
@@ -2478,10 +2479,24 @@ body::before {
 }
 
 .bg-glass-dark{
-    /* glass like effect */
-    background: rgba(0, 0, 0, 0.5) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(5px) !important;
+  /* glass like effect */
+  background: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+}
+
+.bg-glass-dark-light{
+  /* glass like effect */
+  background: rgba(0, 0, 0, 0.35) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+}
+
+.bg-glass-darker{
+  /* glass like effect */
+  background: rgba(0, 0, 0, 0.75) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
 }
 
 .bg-glass-light{

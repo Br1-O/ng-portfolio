@@ -1,43 +1,55 @@
-<footer id="contact" class="bg-glass-light">
+<footer id="contact">
     
-    <div id="footer-contact">
-        <h3>
-            {{ 'FOOTER.TITLE' | translate }}
-        </h3>
-
-        <p>
-            {{ 'FOOTER.P-1' | translate }}
-        </p>
-        <p>
-            {{ 'FOOTER.P-2' | translate }}
-        </p>
-
-        <ul id="footer-contact-icons">
-            <li>
-                <a href="http://www.linkedin.com/in/bortuno" target="_blank" rel="noopener noreferrer" [title]="'FOOTER.TITLE-ICON-LINKEDIN' | translate">
-                    <i class='bx bxl-linkedin-square' [attr.alt]="'FOOTER.ALT-ICON-LINKEDIN' | translate"></i>
-                </a>
-            </li>
-            <li>
-                <a href="mailto:bruno.ortuno2@gmail.com" [title]="'FOOTER.TITLE-ICON-EMAIL' | translate">
-                    <i class='bx bx-envelope' [attr.alt]="'FOOTER.ALT-ICON-LINKEDIN' | translate"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://wa.me/5492234376321" target="_blank" [title]="'FOOTER.TITLE-ICON-WHATSAPP' | translate">
-                    <i class='bx bxl-whatsapp' [attr.alt]="'FOOTER.ALT-ICON-LINKEDIN' | translate"></i>
-                </a>
-            </li>
-            <li>
-                <a href="http://github.com/Br1-O" target="_blank" rel="noopener noreferrer" [title]="'FOOTER.TITLE-ICON-GITHUB' | translate">
-                    <i class='bx bxl-github' [attr.alt]="'FOOTER.ALT-ICON-LINKEDIN' | translate"></i>
-                </a>
-            </li>
-        </ul>
+    <div id="footer-content" class="bg-glass-light">
+        <div id="footer-contact">
+            <h3>
+                {{ 'FOOTER.TITLE' | translate }}
+            </h3>
+    
+            <p>
+                {{ 'FOOTER.P-1' | translate }}
+            </p>
+            <p>
+                {{ 'FOOTER.P-2' | translate }}
+            </p>
+    
+            <ul id="footer-contact-icons">
+                <li>
+                    <a href="http://www.linkedin.com/in/bortuno" target="_blank" rel="noopener noreferrer" [title]="'FOOTER.TITLE-ICON-LINKEDIN' | translate">
+                        <i class='bx bxl-linkedin-square' [attr.alt]="'FOOTER.ALT-ICON-LINKEDIN' | translate"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:bruno.ortuno2@gmail.com" [title]="'FOOTER.TITLE-ICON-EMAIL' | translate">
+                        <i class='bx bx-envelope' [attr.alt]="'FOOTER.ALT-ICON-LINKEDIN' | translate"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/5492234376321" target="_blank" [title]="'FOOTER.TITLE-ICON-WHATSAPP' | translate">
+                        <i class='bx bxl-whatsapp' [attr.alt]="'FOOTER.ALT-ICON-LINKEDIN' | translate"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://github.com/Br1-O" target="_blank" rel="noopener noreferrer" [title]="'FOOTER.TITLE-ICON-GITHUB' | translate">
+                        <i class='bx bxl-github' [attr.alt]="'FOOTER.ALT-ICON-LINKEDIN' | translate"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+        <div id="footer-form">
+            <app-contact-form></app-contact-form>
+        </div>
     </div>
 
-    <div id="footer-form">
-        <app-contact-form></app-contact-form>
+    <div id="copyright">
+        <p>
+            {{'COPYRIGHT.P-1' | translate}}
+        </p>
+        <p> 
+            {{'COPYRIGHT.P-2' | translate}}
+        </p>
     </div>
 
 </footer>
+

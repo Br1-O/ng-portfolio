@@ -235,5 +235,10 @@
 
       "SUCCESS-MESSAGE": "Message sent successfully!",
       "ERROR-MESSAGE": "The message couldn't be sent!"
+    },
+    "COPYRIGHT":
+    {
+      "P-1": "Bruno Ortuño Portfolio © 2024 · All rights reserved ·",
+      "P-2": "Designed and built from scratch by Bruno O. Ortuño"
     }
 }

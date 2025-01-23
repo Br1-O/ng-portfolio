@@ -243,5 +243,10 @@
 
     "SUCCESS-MESSAGE": "¡Mensaje enviado correctamente!",
     "ERROR-MESSAGE": "¡No se pudo enviar el mensaje!"
-  }    
+  },
+  "COPYRIGHT":
+  {
+    "P-1": "Portafolio de Bruno Ortuño © 2024 · Todos los derechos reservados ·",
+    "P-2": "Diseñado y creado desde cero por Bruno O. Ortuño"
+  }
 }
