@@ -37,12 +37,6 @@ footer{
     color: var(--font-color);
 }
 
-#footer-contact p:nth-of-type(2){
-    line-height: 1.5;
-    color: var(--font-hover-color);
-}
-
-
 #footer-contact-icons{
     display: flex;
     flex-direction: row;

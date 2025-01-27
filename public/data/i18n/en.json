@@ -32,6 +32,7 @@
       "SUBTITLE-2": "Languages",
       "ITEM-TONGUE-1": "English · Level: C2",
       "ITEM-TONGUE-2": "Japanese · Level: N6",
+      "ITEM-TONGUE-3": "Spanish · Level: Native",
       "GO-TO-NEXT-SECTION": "Go to Projects"
     },
     "PROJECTS": {
@@ -199,7 +200,7 @@
     },
     "FOOTER": {
       "TITLE": "Let's turn your ideas into reality!",
-      "P-1": "I am available to bring your ideas to life in the best possible way.",
+      "P-1": "I am available to bring all your ideas to life.",
       "P-2": "Feel free to contact me through any of the following methods:",
       "TITLE-ICON-LINKEDIN": "See LinkedIn profile",
       "TITLE-ICON-EMAIL": "Send email",

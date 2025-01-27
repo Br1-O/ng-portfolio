@@ -34,6 +34,7 @@
     "SUBTITLE-2": "Idiomas",
     "ITEM-TONGUE-1": "Inglés · Nivel: C2",
     "ITEM-TONGUE-2": "Japonés · Nivel: N6",
+    "ITEM-TONGUE-3": "Español · Nivel: Nativo",
     "GO-TO-NEXT-SECTION": "Ir a Proyectos"
   },
   "PROJECTS":
@@ -206,7 +207,7 @@
   "FOOTER":
   {
     "TITLE": "¡Hagamos sus ideas realidad!",
-    "P-1": "Estoy a su disposición para llevar sus ideas a la práctica de la mejor forma posible.",
+    "P-1": "Estoy a su disposición para llevar todas sus ideas a la práctica.",
     "P-2": "Sientase libre de contactarme por alguna de las siguientes vias:",
     "TITLE-ICON-LINKEDIN": "Ver LinkedIn",
     "TITLE-ICON-EMAIL": "Enviar correo electrónico",
