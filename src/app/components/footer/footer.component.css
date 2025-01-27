@@ -73,6 +73,7 @@ i{
     box-shadow: 0 -0.5px 0 0 black;
     background-color: var(--main-color-trans) !important;
     filter: brightness(0.8);
+    border-top: 1px solid var(--font-hover-color);
 }
 
 @media (min-width: 768px){

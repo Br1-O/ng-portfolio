@@ -1,0 +1,22 @@
+<div class="education-container">
+
+    <div id="title-container">
+        <h3 id="title" *ngIf="education.name">
+            {{education.name}}
+        </h3>
+    </div>
+    
+    <h4 *ngIf="education.place">
+        {{education.place}}
+    </h4>
+    <h5 *ngIf="education.date">
+        {{education.date}}
+    </h5>
+
+    <p *ngIf="education.subjects">
+        {{education.description}}
+    </p>
+    <p *ngIf="education.subjects">
+        <span>{{'EDUCATION.SKILLS' | translate}}: </span> {{(education.subjects)}}
+    </p>
+</div>

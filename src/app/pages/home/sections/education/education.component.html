@@ -4,7 +4,16 @@
         <span>{{ 'EDUCATION.TITLE' | translate }}</span>
     </h2>
 
-    <div *ngIf="educations.length > 0" id="education-wrapper">
+    <div *ngIf="false" id="btn-view-container">
+        <i class='bx bxs-grid-alt' id="btn-view-cards" (click) = "setViewAsCards()" [attr.disabled] =  "isViewSetAsCards ? '' : null"></i>
+        <i class='bx bxs-objects-horizontal-left' id="btn-view-list" (click) = "setViewAsList()" [attr.disabled] =  "isViewSetAsList ? '' : null"></i>
+    </div>
+
+    <div *ngIf="educations.length > 0 && isViewSetAsCards" id="education-wrapper">
+        <app-education-card-full [education] = "education" *ngFor="let education of educations"></app-education-card-full>
+    </div>
+
+    <div *ngIf="educations.length > 0 && isViewSetAsList" id="education-wrapper">
         <app-education-card [education] = "education" *ngFor="let education of educations"></app-education-card>
     </div>
 

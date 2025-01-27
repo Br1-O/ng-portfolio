@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ScrollSpyDirective } from '../../../../directives/scroll-spy.directive';
 import { IconsService } from '../../../../services/skills/skills.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { PianoService } from '../../../../services/piano/piano.service';
 
 interface SkillsData {
   frontend: [],
@@ -26,7 +27,12 @@ export class SkillsComponent implements OnInit {
 
   currentActiveSection: string = "Backend";
 
-  constructor(private iconsService: IconsService, private sanitizer: DomSanitizer, private cdr: ChangeDetectorRef) {}
+  constructor(
+    private iconsService: IconsService, 
+    private sanitizer: DomSanitizer, 
+    private cdr: ChangeDetectorRef, 
+    private pianoService: PianoService
+  ) {}
 
   ngOnInit(): void {
     this.iconsService.getIcons().subscribe((data) => {
@@ -65,6 +71,10 @@ export class SkillsComponent implements OnInit {
         this.cdr.detectChanges();
       }, 100);
     }
+  }
+
+  playPianoKey(index:number, duration:number = 0.2, gain:number = 0.5){
+    this.pianoService.playSound(index, duration, gain);
   }
 
 }

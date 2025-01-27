@@ -17,6 +17,39 @@
   overflow: hidden;
 }
 
+#btn-view-container{
+  background-color: var(--secondary-color-trans);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:0.5rem;
+  width: max-content;
+  margin:1rem 0rem;
+  padding:0.5rem 1rem;
+  border: 1px solid var(--font-hover-color);
+  border-radius: 15px 0px;
+}
+
+#btn-view-container span{
+  background-color:var(--main-color);
+}
+
+#btn-view-container i{
+  font-size: 2rem;
+  color: var(--font-hover-color);
+  cursor: pointer;
+}
+
+#btn-view-container i:hover{
+  color: var(--main-color);
+}
+
+#btn-view-container i[disabled]{
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 @media (min-width: 446px){
   #education{
     display: flex;
